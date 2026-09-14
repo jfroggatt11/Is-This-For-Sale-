@@ -1,0 +1,6 @@
+include ADAPTER_SPEC.md CONTRIBUTING.md LICENSE
+recursive-include adapter_specs *.md
+recursive-include docs *.md *.json
+recursive-include examples *.json
+recursive-include tests *.py *.html *.xml *.md
+recursive-include scripts *.py

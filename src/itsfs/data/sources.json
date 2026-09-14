@@ -1,0 +1,51 @@
+[
+  {
+    "source": "demanio", "country_codes": ["IT"],
+    "property_types": ["residential", "land", "commercial", "agricultural", "mixed", "other"],
+    "access_method": "public_html", "status": "working", "enabled": true,
+    "location_search": false, "location_precision": "area_only", "adapter": "demanio",
+    "options": {"max_pages": 2, "max_details": 20},
+    "notes": "Public state-property sales; no key; regional candidates, municipality precision.",
+    "review": "adapter_specs/demanio.md (2026-09-14)"
+  },
+  {
+    "source": "idealista", "country_codes": ["IT"],
+    "property_types": ["residential", "commercial", "garage"],
+    "access_method": "official_api", "status": "needs_access", "enabled": false,
+    "location_search": true, "location_precision": "approximate",
+    "notes": "Official Search API requires approval; no credentials assumed; not implemented.",
+    "review": "docs/ITALIAN_SOURCES.md"
+  },
+  {
+    "source": "immobiliare", "country_codes": ["IT"],
+    "property_types": ["residential", "land", "commercial"],
+    "access_method": "partner_api", "status": "needs_access", "enabled": false,
+    "location_search": false, "location_precision": "unknown",
+    "notes": "Documented syndication API publishes agency listings, not a public read feed.",
+    "review": "docs/ITALIAN_SOURCES.md"
+  },
+  {
+    "source": "lombardia_auctions", "country_codes": ["IT"],
+    "property_types": ["residential", "land", "commercial"],
+    "access_method": "open_data", "status": "unavailable", "enabled": false,
+    "location_search": true, "location_precision": "approximate",
+    "notes": "Promising public JSON/GeoJSON; direct access failed; freshness unverified.",
+    "review": "docs/ITALIAN_SOURCES.md"
+  },
+  {
+    "source": "italianhousesforsale", "country_codes": ["IT"],
+    "property_types": ["residential", "land", "commercial"],
+    "access_method": "html", "status": "rejected", "enabled": false,
+    "location_search": false, "location_precision": "unknown",
+    "notes": "Terms prohibit copying/redistribution; no adapter.",
+    "review": "docs/ITALIAN_SOURCES.md"
+  },
+  {
+    "source": "jaklin_riegelmann", "country_codes": ["IT"],
+    "property_types": ["residential", "commercial", "agricultural"],
+    "access_method": "html_rss", "status": "rejected", "enabled": false,
+    "location_search": false, "location_precision": "unknown",
+    "notes": "Third-party publication restricted by terms; unsuitable for shared public results.",
+    "review": "docs/ITALIAN_SOURCES.md"
+  }
+]

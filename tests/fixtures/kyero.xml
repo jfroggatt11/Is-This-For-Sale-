@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root><kyero><feed_version>3</feed_version></kyero>
+<property><id>synthetic-home</id><country>Italy</country><price_freq>sale</price_freq>
+<type>villa</type><town>Anacapri</town><price>195000</price><currency>EUR</currency>
+<location><latitude>40.553</latitude><longitude>14.218</longitude></location>
+<surface_area><built>120</built><plot>700</plot></surface_area><beds>3</beds>
+<url><it>https://example.invalid/home</it></url><desc><it>Annuncio di prova.</it></desc></property>
+<property><id>synthetic-land</id><country>Italia</country><price_freq>sale</price_freq>
+<type>land</type><town>Anacapri</town><price>85000</price>
+<location><latitude>40.554</latitude><longitude>14.219</longitude></location>
+<surface_area><plot>2000</plot></surface_area><beds>0</beds>
+<url><en>https://example.invalid/land</en></url></property>
+<property><id>synthetic-shop</id><country>IT</country><price_freq>sale</price_freq>
+<type>shop</type><town>Anacapri</town>
+<location><latitude>40.555</latitude><longitude>14.22</longitude></location></property>
+<property><id>unknown-location</id><country>Italy</country><price_freq>sale</price_freq>
+<type>unmapped category</type><town>Anacapri</town></property>
+<property><id>rental</id><country>Italy</country><price_freq>month</price_freq></property>
+<property><id>missing-country-is-not-italy</id><price_freq>sale</price_freq></property>
+<property><id>spanish</id><country>Spain</country><price_freq>sale</price_freq></property>
+</root>

@@ -1,0 +1,20 @@
+[
+  {
+    "source": "demo_agency_a", "country_codes": ["IT"],
+    "property_types": ["residential", "land", "commercial", "other"],
+    "access_method": "local_xml", "status": "working", "enabled": true,
+    "location_search": true, "location_precision": "approximate", "adapter": "kyero",
+    "options": {"location": "../tests/fixtures/kyero.xml"},
+    "notes": "SYNTHETIC demonstration data; not an actual agency.",
+    "review": "tests/fixtures/README.md — original MIT-licensed test data"
+  },
+  {
+    "source": "demo_agency_b", "country_codes": ["IT"],
+    "property_types": ["residential", "land", "commercial", "other"],
+    "access_method": "local_xml", "status": "working", "enabled": true,
+    "location_search": true, "location_precision": "approximate", "adapter": "kyero",
+    "options": {"location": "../tests/fixtures/kyero.xml"},
+    "notes": "SYNTHETIC second source to exercise deduplication.",
+    "review": "tests/fixtures/README.md — original MIT-licensed test data"
+  }
+]

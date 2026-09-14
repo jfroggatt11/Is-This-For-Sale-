@@ -1,0 +1,67 @@
+{
+  "query": {
+    "latitude": 43.77925,
+    "longitude": 11.24626,
+    "radius_m": 10000.0,
+    "property_types": [
+      "commercial"
+    ],
+    "country": null,
+    "include_unlocated": true
+  },
+  "country": "IT",
+  "status": "partial",
+  "results": [
+    {
+      "source": "demanio",
+      "source_id": "20756",
+      "title": "LOTTO 1 - FIB0916 - FIRENZE - UNITA' IMMOBILIARI COMMERCIALI",
+      "url": "https://venditaimmobili.agenziademanio.it/AsteDemanio/sito.php/immobile?id-immobile=20756",
+      "price": 2030833.0,
+      "currency": "EUR",
+      "property_type": "commercial",
+      "latitude": 43.77925,
+      "longitude": 11.24626,
+      "location_precision": "area_only",
+      "area_m2": 2142.0,
+      "bedrooms": null,
+      "address": "EMPOLI 4 A/B/C",
+      "municipality": "FIRENZE",
+      "description": null,
+      "retrieved_at": "2026-09-14T18:01:09.246796+00:00",
+      "raw": {
+        "price_kind": "auction_starting_price",
+        "offer_deadline": "2026-09-28T12:00:00+02:00",
+        "sale_method": "Asta pubblica",
+        "region": "TOSCANA",
+        "source_property_type": "Fabbricati",
+        "source_designation": "Commerciale",
+        "coordinate_basis": "GeoNames municipality point"
+      },
+      "distance_m": 0.0,
+      "radius_match": "unverified",
+      "duplicates": []
+    }
+  ],
+  "sources": [
+    {
+      "source": "demanio",
+      "status": "partial",
+      "count": 2,
+      "warnings": [
+        "unrecognized Demanio Superficie Lorda; retained as null",
+        "unrecognized Demanio Superficie Lorda; retained as null",
+        "unrecognized Demanio Superficie Lorda; retained as null",
+        "unrecognized Demanio Superficie Lorda; retained as null",
+        "unrecognized Demanio Superficie Lorda; retained as null",
+        "unrecognized Demanio Superficie Lorda; retained as null",
+        "unrecognized Demanio Superficie Lorda; retained as null",
+        "unrecognized Demanio Superficie Lorda; retained as null",
+        "page limit reached; coverage is incomplete",
+        "Demanio locations are municipality-level; property radius unverified"
+      ],
+      "error": null
+    }
+  ],
+  "warnings": []
+}
