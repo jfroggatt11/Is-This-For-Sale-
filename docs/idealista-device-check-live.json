@@ -1,0 +1,24 @@
+{
+  "evidence_type": "fresh_browser_access_diagnostics",
+  "personal_chrome_used": false,
+  "browser_settings_changed": false,
+  "challenge_interaction": false,
+  "retries": 0,
+  "homepage": {
+    "url": "https://www.idealista.it/",
+    "initial_http_status": 403,
+    "observed_at": "2026-09-15T11:42:45.856262+00:00",
+    "device_check_frame": "https://geo.captcha-delivery.com/interstitial/",
+    "ready_after_30_seconds": false
+  },
+  "search": {
+    "url": "https://www.idealista.it/vendita-case/firenze-firenze/con-aste_no/",
+    "observed_at": "2026-09-15T11:44:47.647993+00:00",
+    "initial_http_status": 403,
+    "search_ready": false,
+    "html_src_challenge_marker_detected": false,
+    "navigated_frame_challenge_detected": true,
+    "challenge_kind": "interactive visual slider with audio alternative; not used"
+  },
+  "conclusion": "An observed public sale route is gated by an interactive CAPTCHA in fresh Chromium. Homepage device check did not finish. No direct search data was collected."
+}
