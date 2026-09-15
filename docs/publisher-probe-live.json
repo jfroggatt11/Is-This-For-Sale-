@@ -1,0 +1,3969 @@
+{
+  "started_at": "2026-09-14T20:06:20.036419+00:00",
+  "limits": {
+    "max_cities_per_query": 1,
+    "max_pages_per_city": 2,
+    "radius_m": 5000,
+    "property_types": [
+      "residential"
+    ],
+    "exhaustive": false
+  },
+  "queries": [
+    {
+      "location": "Firenze, FI",
+      "query": {
+        "latitude": 43.77925,
+        "longitude": 11.24626,
+        "radius_m": 5000,
+        "property_types": [
+          "residential"
+        ],
+        "country": null,
+        "include_unlocated": false
+      },
+      "status": "partial",
+      "matched_listings": 36,
+      "publisher_references": [
+        {
+          "publisher": "allaricerca.it",
+          "matched_listings": 6,
+          "distinct_urls": 6,
+          "observed_via": [
+            "caasa"
+          ],
+          "verification": "not_fetched"
+        },
+        {
+          "publisher": "bachecacase.com",
+          "matched_listings": 16,
+          "distinct_urls": 16,
+          "observed_via": [
+            "caasa"
+          ],
+          "verification": "not_fetched"
+        },
+        {
+          "publisher": "bancadellecase.it",
+          "matched_listings": 16,
+          "distinct_urls": 16,
+          "observed_via": [
+            "caasa"
+          ],
+          "verification": "not_fetched"
+        },
+        {
+          "publisher": "bilocale.it",
+          "matched_listings": 14,
+          "distinct_urls": 14,
+          "observed_via": [
+            "caasa"
+          ],
+          "verification": "not_fetched"
+        },
+        {
+          "publisher": "casamix.it",
+          "matched_listings": 9,
+          "distinct_urls": 9,
+          "observed_via": [
+            "caasa"
+          ],
+          "verification": "not_fetched"
+        },
+        {
+          "publisher": "case24.it",
+          "matched_listings": 10,
+          "distinct_urls": 10,
+          "observed_via": [
+            "caasa"
+          ],
+          "verification": "not_fetched"
+        },
+        {
+          "publisher": "firenze.bakeca.it",
+          "matched_listings": 8,
+          "distinct_urls": 8,
+          "observed_via": [
+            "caasa"
+          ],
+          "verification": "not_fetched"
+        },
+        {
+          "publisher": "idealista.it",
+          "matched_listings": 27,
+          "distinct_urls": 27,
+          "observed_via": [
+            "caasa"
+          ],
+          "verification": "not_fetched"
+        },
+        {
+          "publisher": "immobiliare.it",
+          "matched_listings": 23,
+          "distinct_urls": 23,
+          "observed_via": [
+            "caasa"
+          ],
+          "verification": "not_fetched"
+        },
+        {
+          "publisher": "ioaffitto.it",
+          "matched_listings": 15,
+          "distinct_urls": 15,
+          "observed_via": [
+            "caasa"
+          ],
+          "verification": "not_fetched"
+        },
+        {
+          "publisher": "it.easyavvisi.com",
+          "matched_listings": 5,
+          "distinct_urls": 5,
+          "observed_via": [
+            "caasa"
+          ],
+          "verification": "not_fetched"
+        },
+        {
+          "publisher": "pcase.it",
+          "matched_listings": 7,
+          "distinct_urls": 7,
+          "observed_via": [
+            "caasa"
+          ],
+          "verification": "not_fetched"
+        },
+        {
+          "publisher": "prossimacasa.it",
+          "matched_listings": 9,
+          "distinct_urls": 9,
+          "observed_via": [
+            "caasa"
+          ],
+          "verification": "not_fetched"
+        },
+        {
+          "publisher": "risorseimmobiliari.it",
+          "matched_listings": 3,
+          "distinct_urls": 3,
+          "observed_via": [
+            "caasa"
+          ],
+          "verification": "not_fetched"
+        },
+        {
+          "publisher": "trovacasa.it",
+          "matched_listings": 17,
+          "distinct_urls": 17,
+          "observed_via": [
+            "caasa"
+          ],
+          "verification": "not_fetched"
+        },
+        {
+          "publisher": "vetrinaannunci.com",
+          "matched_listings": 6,
+          "distinct_urls": 6,
+          "observed_via": [
+            "caasa"
+          ],
+          "verification": "not_fetched"
+        },
+        {
+          "publisher": "webimmobiliare.com",
+          "matched_listings": 2,
+          "distinct_urls": 2,
+          "observed_via": [
+            "caasa"
+          ],
+          "verification": "not_fetched"
+        },
+        {
+          "publisher": "wikicasa.it",
+          "matched_listings": 23,
+          "distinct_urls": 23,
+          "observed_via": [
+            "caasa"
+          ],
+          "verification": "not_fetched"
+        }
+      ],
+      "sources": [
+        {
+          "source": "caasa",
+          "status": "partial",
+          "count": 36,
+          "warnings": [
+            "Caasa aggregation is bounded to the query municipality and immediate neighbours; page/city caps can miss listings.",
+            "municipality request limit reached; coverage is incomplete",
+            "advertisement excluded: sale label conflicts with rental/auction text",
+            "page limit reached; coverage is incomplete"
+          ],
+          "error": null
+        }
+      ],
+      "evidence": [
+        {
+          "caasa_id": "1712206823",
+          "caasa_url": "https://www.caasa.it/toscana/firenze/firenze/vendita-660e33e7-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:26.667673+00:00",
+          "radius_match": "approximate",
+          "distance_m": 219.27756278987982,
+          "references": [
+            {
+              "publisher": "allaricerca.it",
+              "url": "https://www.allaricerca.it/2612835/Vendita-appartamento-Via-Guido-Monaco-Firenze-(FI)",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "bachecacase.com",
+              "url": "https://www.bachecacase.com/scheda-immobile/155021222/vendita-appartamento-firenze",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "bancadellecase.it",
+              "url": "https://www.bancadellecase.it/appartamento-plurilocale-in-vendita-a-firenze_5046807",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "bilocale.it",
+              "url": "https://www.bilocale.it/Firenze-Via-Guido-Monaco-Appartamento-Vendita-2752863.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "firenze.bakeca.it",
+              "url": "https://firenze.bakeca.it/dettaglio/vendita-case/appartamento-in-vendita-a-firenze-duomo-52yd299084274",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/36690737/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/132113406/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "ioaffitto.it",
+              "url": "https://www.ioaffitto.it/annuncio/agim-1116255.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "it.easyavvisi.com",
+              "url": "https://it.easyavvisi.com/via-guido-monaco-5-vani-140mq-firenze-P7f46444767d82805fad9ff0c025ffd33",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "pcase.it",
+              "url": "http://www.pcase.it/immobili/appartamento-vendita-via-guido-monaco-firenze-sc9702794/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "trovacasa.it",
+              "url": "https://www.trovacasa.it/annunci/fi-tc-71456-72963043",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "vetrinaannunci.com",
+              "url": "https://www.vetrinaannunci.com/dettaglio/firenze/vendita-immobili/appartamento-il-prato-firenze/9580880",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "wikicasa.it",
+              "url": "https://www.wikicasa.it/annuncio/30730944",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712803746",
+          "caasa_url": "https://www.caasa.it/toscana/firenze/firenze/vendita-66174fa2-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:26.698094+00:00",
+          "radius_match": "approximate",
+          "distance_m": 240.43655256308352,
+          "references": [
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/35825743/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "wikicasa.it",
+              "url": "https://www.wikicasa.it/annuncio/30076918",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712606181",
+          "caasa_url": "https://www.caasa.it/toscana/firenze/firenze/vendita-66144be5-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:26.680001+00:00",
+          "radius_match": "approximate",
+          "distance_m": 877.4713363802748,
+          "references": [
+            {
+              "publisher": "allaricerca.it",
+              "url": "https://www.allaricerca.it/2615691/Vendita-appartamento-Via-Giovanni-Targioni-Tozzetti-Firenze-(FI)",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "bachecacase.com",
+              "url": "https://www.bachecacase.com/scheda-immobile/155080522/vendita-quadrilocale-firenze",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "bancadellecase.it",
+              "url": "https://www.bancadellecase.it/appartamento-quadrilocale-in-vendita-a-firenze_5050794",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "bilocale.it",
+              "url": "https://www.bilocale.it/Firenze-Via-Giovanni-Targioni-Tozzetti-Appartamento-Vendita-2756894.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "firenze.bakeca.it",
+              "url": "https://firenze.bakeca.it/dettaglio/vendita-case/quadrilocale-in-vendita-a-firenze-rifredi-qh4i299245012",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/36752014/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/132247206/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "ioaffitto.it",
+              "url": "https://www.ioaffitto.it/annuncio/agim-1117683.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "it.easyavvisi.com",
+              "url": "https://it.easyavvisi.com/via-giovanni-targioni-tozzetti-quadrilocale-78mq-firenze-P84623e5701135e1d6fc4487654904ad5",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "pcase.it",
+              "url": "http://www.pcase.it/immobili/quadrilocale-vendita-via-giovanni-targioni-tozzetti-firenze-sc9705743/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "trovacasa.it",
+              "url": "https://www.trovacasa.it/annunci/fi-tc-71456-73024989",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "vetrinaannunci.com",
+              "url": "https://www.vetrinaannunci.com/dettaglio/firenze/vendita-immobili/appartamento-quadrilocale-san-jacopino-firenze/9601489",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "wikicasa.it",
+              "url": "https://www.wikicasa.it/annuncio/30774771",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712541564",
+          "caasa_url": "https://www.caasa.it/toscana/firenze/firenze/vendita-66134f7c-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:26.653523+00:00",
+          "radius_match": "approximate",
+          "distance_m": 1249.5015807949142,
+          "references": [
+            {
+              "publisher": "bachecacase.com",
+              "url": "https://www.bachecacase.com/scheda-immobile/155080796/vendita-appartamento-firenze",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "bancadellecase.it",
+              "url": "https://www.bancadellecase.it/appartamento-quadrilocale-in-vendita-a-firenze_5051012",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "bilocale.it",
+              "url": "https://www.bilocale.it/Firenze-Porta-al-Prato-/-Sant'Iacopino-/-Statuto-/-Fortezza-Appartamento-Vendita-2757667.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "casamix.it",
+              "url": "https://www.casamix.it/annuncio_985298_appartamento_100mq_firenze_firenze.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "case24.it",
+              "url": "https://www.case24.it/immobili/toscana/firenze/firenze/3_camere_in_vendita/1788921796.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/36765770/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "ioaffitto.it",
+              "url": "https://www.ioaffitto.it/annuncio/gestimm-5128434.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "prossimacasa.it",
+              "url": "https://www.prossimacasa.it/firenze/firenze/appartamento_in_vendita_porta-al-prato-san-iacopino-statuto-fortezza/20275105.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "wikicasa.it",
+              "url": "https://www.wikicasa.it/annuncio/30775380",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712559924",
+          "caasa_url": "https://www.caasa.it/toscana/firenze/firenze/vendita-66139734-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:26.651172+00:00",
+          "radius_match": "approximate",
+          "distance_m": 1249.5015807949142,
+          "references": [
+            {
+              "publisher": "bachecacase.com",
+              "url": "https://www.bachecacase.com/scheda-immobile/155080850/vendita-appartamento-firenze",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "bancadellecase.it",
+              "url": "https://www.bancadellecase.it/appartamento-quadrilocale-in-vendita-a-firenze_5051005",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "bilocale.it",
+              "url": "https://www.bilocale.it/Firenze-Porta-al-Prato-/-Sant'Iacopino-/-Statuto-/-Fortezza-Appartamento-Vendita-2757724.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "casamix.it",
+              "url": "https://www.casamix.it/annuncio_985291_appartamento_120mq_firenze_firenze.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "case24.it",
+              "url": "https://www.case24.it/immobili/toscana/firenze/firenze/2_camere_in_vendita/1788921795.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/36765769/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "ioaffitto.it",
+              "url": "https://www.ioaffitto.it/annuncio/gestimm-5128391.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "prossimacasa.it",
+              "url": "https://www.prossimacasa.it/firenze/firenze/appartamento_in_vendita_porta-al-prato-san-iacopino-statuto-fortezza/20275098.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "wikicasa.it",
+              "url": "https://www.wikicasa.it/annuncio/30775011",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712376081",
+          "caasa_url": "https://www.caasa.it/toscana/firenze/firenze/vendita-6610c911-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:26.657927+00:00",
+          "radius_match": "approximate",
+          "distance_m": 1487.1461585431719,
+          "references": [
+            {
+              "publisher": "allaricerca.it",
+              "url": "https://www.allaricerca.it/2613839/Vendita-appartamento-Via-Petrella-Firenze-(FI)",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "bachecacase.com",
+              "url": "https://www.bachecacase.com/scheda-immobile/155048094/vendita-bilocale-firenze",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "bancadellecase.it",
+              "url": "https://www.bancadellecase.it/appartamento-bilocale-in-vendita-a-firenze_5049045",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "bilocale.it",
+              "url": "https://www.bilocale.it/Firenze-Via-Petrella-Appartamento-Vendita-2755049.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "firenze.bakeca.it",
+              "url": "https://firenze.bakeca.it/dettaglio/vendita-case/bilocale-in-vendita-a-firenze-rifredi-mnv8299134538",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/36732722/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/132189656/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "ioaffitto.it",
+              "url": "https://www.ioaffitto.it/annuncio/agim-1117038.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "it.easyavvisi.com",
+              "url": "https://it.easyavvisi.com/via-petrella-bilocale-55mq-firenze-P3eae4aab19be4a5922773b9213b663ca",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "pcase.it",
+              "url": "http://www.pcase.it/immobili/bilocale-vendita-via-petrella-firenze-sc9704219/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "trovacasa.it",
+              "url": "https://www.trovacasa.it/annunci/fi-tc-71456-73005223",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "vetrinaannunci.com",
+              "url": "https://www.vetrinaannunci.com/dettaglio/firenze/vendita-immobili/appartamento-bilocale-san-jacopino-firenze/9589061",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "wikicasa.it",
+              "url": "https://www.wikicasa.it/annuncio/30753399",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712630651",
+          "caasa_url": "https://www.caasa.it/toscana/firenze/firenze/vendita-6614ab7b-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:26.670596+00:00",
+          "radius_match": "approximate",
+          "distance_m": 1536.1125666050484,
+          "references": [
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/36769839/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/132303752/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "wikicasa.it",
+              "url": "https://www.wikicasa.it/annuncio/30800553",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712630632",
+          "caasa_url": "https://www.caasa.it/toscana/firenze/firenze/vendita-6614ab68-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:26.701869+00:00",
+          "radius_match": "approximate",
+          "distance_m": 1961.2215668978095,
+          "references": [
+            {
+              "publisher": "case24.it",
+              "url": "https://www.case24.it/immobili/toscana/firenze/firenze/2_camere_in_vendita/1789090280.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "risorseimmobiliari.it",
+              "url": "https://www.risorseimmobiliari.it/firenze/vendita-appartamento-firenze-5124781.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "wikicasa.it",
+              "url": "https://www.wikicasa.it/annuncio/30800889",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712130355",
+          "caasa_url": "https://www.caasa.it/toscana/firenze/firenze/vendita-660d0933-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:28.465767+00:00",
+          "radius_match": "approximate",
+          "distance_m": 2143.248156673206,
+          "references": [
+            {
+              "publisher": "bachecacase.com",
+              "url": "https://www.bachecacase.com/scheda-immobile/155006880/vendita-appartamento-firenze",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "bancadellecase.it",
+              "url": "https://www.bancadellecase.it/appartamento-quadrilocale-in-vendita-a-firenze_5046277",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "bilocale.it",
+              "url": "https://www.bilocale.it/Firenze-Porta-Romana-/-Giardino-di-Boboli-Appartamento-Vendita-2752851.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "casamix.it",
+              "url": "https://www.casamix.it/annuncio_984298_appartamento_105mq_firenze_firenze.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "case24.it",
+              "url": "https://www.case24.it/immobili/toscana/firenze/firenze/2_camere_in_vendita/1788316848.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/36765758/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "ioaffitto.it",
+              "url": "https://www.ioaffitto.it/annuncio/gestimm-5125226.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "prossimacasa.it",
+              "url": "https://www.prossimacasa.it/firenze/firenze/appartamento_in_vendita_porta-romana-giardino-di-boboli/20273938.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "wikicasa.it",
+              "url": "https://www.wikicasa.it/annuncio/30718701",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712695440",
+          "caasa_url": "https://www.caasa.it/toscana/firenze/firenze/vendita-6615a890-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:26.646474+00:00",
+          "radius_match": "approximate",
+          "distance_m": 2166.5137813800675,
+          "references": [
+            {
+              "publisher": "bachecacase.com",
+              "url": "https://www.bachecacase.com/scheda-immobile/154504365/vendita-appartamento-firenze",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/36176132/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/132253992/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "pcase.it",
+              "url": "http://www.pcase.it/immobili/bilocale-ristrutturato-firenze-sc9676580/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "trovacasa.it",
+              "url": "https://www.trovacasa.it/annunci/fi-tc-84810-72122280",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "wikicasa.it",
+              "url": "https://www.wikicasa.it/annuncio/30246931",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1705487108",
+          "caasa_url": "https://www.caasa.it/toscana/firenze/firenze/vendita-65a7ab04-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:28.498877+00:00",
+          "radius_match": "approximate",
+          "distance_m": 2293.522545728465,
+          "references": [
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/35488046/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/128464842/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "trovacasa.it",
+              "url": "https://www.trovacasa.it/annunci/fi-tc-24793-71282443",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712690472",
+          "caasa_url": "https://www.caasa.it/toscana/firenze/firenze/vendita-66159528-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:28.479633+00:00",
+          "radius_match": "approximate",
+          "distance_m": 2329.236160706695,
+          "references": [
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/130142262/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712781526",
+          "caasa_url": "https://www.caasa.it/toscana/firenze/firenze/vendita-6616f8d6-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:28.508305+00:00",
+          "radius_match": "approximate",
+          "distance_m": 2444.566474440434,
+          "references": [
+            {
+              "publisher": "bancadellecase.it",
+              "url": "https://www.bancadellecase.it/appartamento-monolocale-in-vendita-a-firenze_5053707",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "firenze.bakeca.it",
+              "url": "https://firenze.bakeca.it/dettaglio/vendita-case/appartamento-di-1-vani-e-di-38-mq-firenze-rif-aaj411-r7yk299294014",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/132355704/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712320837",
+          "caasa_url": "https://www.caasa.it/toscana/firenze/firenze/vendita-660ff145-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:28.515608+00:00",
+          "radius_match": "approximate",
+          "distance_m": 2452.2010094459524,
+          "references": [
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/36733803/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/132192012/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "trovacasa.it",
+              "url": "https://www.trovacasa.it/annunci/fi-tc-37599-73003961",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712492485",
+          "caasa_url": "https://www.caasa.it/toscana/firenze/firenze/vendita-66128fc5-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:28.511821+00:00",
+          "radius_match": "approximate",
+          "distance_m": 2485.057596427946,
+          "references": [
+            {
+              "publisher": "bachecacase.com",
+              "url": "https://www.bachecacase.com/scheda-immobile/154979855/vendita-appartamento-firenze",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "bancadellecase.it",
+              "url": "https://www.bancadellecase.it/appartamento-bilocale-in-vendita-a-firenze_5044236",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "bilocale.it",
+              "url": "https://www.bilocale.it/Firenze-Novoli-/-Firenze-Nova-/-Firenze-Nord-Appartamento-Vendita-2750281.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "casamix.it",
+              "url": "https://www.casamix.it/annuncio_983761_appartamento_50mq_firenze_firenze.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/36659340/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/132012234/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "ioaffitto.it",
+              "url": "https://www.ioaffitto.it/annuncio/gestimm-3744877.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "prossimacasa.it",
+              "url": "https://www.prossimacasa.it/firenze/firenze/appartamento_in_vendita_novoli-firenze-nova-firenze-nord/20273361.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "wikicasa.it",
+              "url": "https://www.wikicasa.it/annuncio/30697671",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712307050",
+          "caasa_url": "https://www.caasa.it/toscana/firenze/firenze/vendita-660fbb6a-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:28.484370+00:00",
+          "radius_match": "approximate",
+          "distance_m": 2641.2747845168205,
+          "references": [
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/36718113/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/132163764/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "trovacasa.it",
+              "url": "https://www.trovacasa.it/annunci/fi-tc-19311-72995512",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712818083",
+          "caasa_url": "https://www.caasa.it/toscana/firenze/firenze/vendita-661787a3-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:26.673589+00:00",
+          "radius_match": "approximate",
+          "distance_m": 2670.851031116217,
+          "references": [
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/36760288/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/132261596/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "risorseimmobiliari.it",
+              "url": "https://www.risorseimmobiliari.it/firenze/vendita-appartamento-firenze-campo-di-marte-le-cure-coverciano-5124075.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "trovacasa.it",
+              "url": "https://www.trovacasa.it/annunci/fi-tc-75490-73032595",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712803331",
+          "caasa_url": "https://www.caasa.it/toscana/firenze/firenze/vendita-66174e03-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:28.481875+00:00",
+          "radius_match": "approximate",
+          "distance_m": 2989.6054716980584,
+          "references": [
+            {
+              "publisher": "wikicasa.it",
+              "url": "https://www.wikicasa.it/annuncio/30431154",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1711776771",
+          "caasa_url": "https://www.caasa.it/toscana/firenze/firenze/vendita-6607a403-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:28.472803+00:00",
+          "radius_match": "approximate",
+          "distance_m": 3008.8462361848,
+          "references": [
+            {
+              "publisher": "bancadellecase.it",
+              "url": "https://www.bancadellecase.it/appartamento-quadrilocale-in-vendita-a-firenze_5028188",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "case24.it",
+              "url": "https://www.case24.it/immobili/toscana/firenze/firenze/2_camere_in_vendita/1784517368.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "firenze.bakeca.it",
+              "url": "https://firenze.bakeca.it/dettaglio/vendita-case/appartamento-di-4-vani-e-di-95-mq-firenze-rif-aaj390-4usv298131032",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/131092030/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "trovacasa.it",
+              "url": "https://www.trovacasa.it/annunci/fi-tc-66559-72525532",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "webimmobiliare.com",
+              "url": "http://www.webimmobiliare.com/immobili/TOSCANA/FIRENZE/FIRENZE--ZONA-RIFREDI---DALMAZIA---CAREGGI-/VENDITA-APPARTAMENTO-FIRENZE--ZONA-RIFREDI---DALMAZIA---CAREGGI--FIRENZE-2902486.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712413713",
+          "caasa_url": "https://www.caasa.it/toscana/firenze/firenze/vendita-66115c11-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:28.505031+00:00",
+          "radius_match": "approximate",
+          "distance_m": 3018.1243390842046,
+          "references": [
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/36743298/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/132222156/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "trovacasa.it",
+              "url": "https://www.trovacasa.it/annunci/fi-tc-28898-73015382",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "wikicasa.it",
+              "url": "https://www.wikicasa.it/annuncio/30766329",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712336416",
+          "caasa_url": "https://www.caasa.it/toscana/firenze/firenze/vendita-66102e20-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:28.492483+00:00",
+          "radius_match": "approximate",
+          "distance_m": 3117.44888609761,
+          "references": [
+            {
+              "publisher": "bachecacase.com",
+              "url": "https://www.bachecacase.com/scheda-immobile/155048389/vendita-attico-firenze",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "bancadellecase.it",
+              "url": "https://www.bancadellecase.it/attico-quadrilocale-in-vendita-a-firenze_5049376",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "bilocale.it",
+              "url": "https://www.bilocale.it/Firenze-Rifredi-/-Careggi-Attico---Mansarda-Vendita-2755651.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "casamix.it",
+              "url": "https://www.casamix.it/annuncio_984873_attico_89mq_firenze_firenze.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "case24.it",
+              "url": "https://www.case24.it/immobili/toscana/firenze/firenze/attici_in_vendita/1788748753.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/36765763/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "ioaffitto.it",
+              "url": "https://www.ioaffitto.it/annuncio/gestimm-5126963.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "prossimacasa.it",
+              "url": "https://www.prossimacasa.it/firenze/firenze/attico_in_vendita_rifredi-careggi/20274644.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "wikicasa.it",
+              "url": "https://www.wikicasa.it/annuncio/30750984",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712541666",
+          "caasa_url": "https://www.caasa.it/toscana/firenze/firenze/vendita-66134fe2-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:26.676577+00:00",
+          "radius_match": "approximate",
+          "distance_m": 3140.114031072135,
+          "references": [
+            {
+              "publisher": "bachecacase.com",
+              "url": "https://www.bachecacase.com/scheda-immobile/155080880/vendita-appartamento-firenze",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "bancadellecase.it",
+              "url": "https://www.bancadellecase.it/appartamento-bilocale-in-vendita-a-firenze_5051066",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "bilocale.it",
+              "url": "https://www.bilocale.it/Firenze-Legnaia-/-Soffiano-Appartamento-Vendita-2757757.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "casamix.it",
+              "url": "https://www.casamix.it/annuncio_985352_appartamento_55mq_firenze_firenze.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "case24.it",
+              "url": "https://www.case24.it/immobili/toscana/firenze/firenze/mono_e_mini_in_vendita/1788921963.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/36760544/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "ioaffitto.it",
+              "url": "https://www.ioaffitto.it/annuncio/gestimm-5128769.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "prossimacasa.it",
+              "url": "https://www.prossimacasa.it/firenze/firenze/appartamento_in_vendita_legnaia-soffiano/20275159.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "wikicasa.it",
+              "url": "https://www.wikicasa.it/annuncio/30779295",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712631581",
+          "caasa_url": "https://www.caasa.it/toscana/firenze/firenze/vendita-6614af1d-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:26.664719+00:00",
+          "radius_match": "approximate",
+          "distance_m": 3181.5667962780717,
+          "references": [
+            {
+              "publisher": "allaricerca.it",
+              "url": "https://www.allaricerca.it/2616961/Vendita-appartamento-Via-Valdinievole-Firenze-(FI)",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "bachecacase.com",
+              "url": "https://www.bachecacase.com/scheda-immobile/155093470/vendita-trilocale-firenze",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "bancadellecase.it",
+              "url": "https://www.bancadellecase.it/appartamento-trilocale-in-vendita-a-firenze_5051458",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "bilocale.it",
+              "url": "https://www.bilocale.it/Firenze-Via-Valdinievole-Appartamento-Vendita-2757602.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "firenze.bakeca.it",
+              "url": "https://firenze.bakeca.it/dettaglio/vendita-case/trilocale-in-vendita-a-firenze-novoli-qsh4299245930",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/36762477/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/132273742/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "ioaffitto.it",
+              "url": "https://www.ioaffitto.it/annuncio/agim-1118017.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "it.easyavvisi.com",
+              "url": "https://it.easyavvisi.com/via-valdinievole-trilocale-53mq-firenze-P77f375f3735be52acd3e23c17e4159a7",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "pcase.it",
+              "url": "http://www.pcase.it/immobili/trilocale-ristrutturato-via-valdinievole-firenze-sc9706435/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "vetrinaannunci.com",
+              "url": "https://www.vetrinaannunci.com/dettaglio/firenze/vendita-immobili/appartamento-trilocale-novoli-firenze/9605061",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "wikicasa.it",
+              "url": "https://www.wikicasa.it/annuncio/30784596",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1709664991",
+          "caasa_url": "https://www.caasa.it/toscana/firenze/firenze/vendita-65e76adf-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:26.683480+00:00",
+          "radius_match": "approximate",
+          "distance_m": 3447.257886991946,
+          "references": [
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/36799485/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/130566960/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "trovacasa.it",
+              "url": "https://www.trovacasa.it/annunci/fi-tc-45865-72248735",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "wikicasa.it",
+              "url": "https://www.wikicasa.it/annuncio/30335007",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1709926968",
+          "caasa_url": "https://www.caasa.it/toscana/firenze/firenze/vendita-65eb6a38-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:28.519305+00:00",
+          "radius_match": "approximate",
+          "distance_m": 3504.6678617081266,
+          "references": [
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/131251376/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "trovacasa.it",
+              "url": "https://www.trovacasa.it/annunci/fi-tc-28618-72589290",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712458265",
+          "caasa_url": "https://www.caasa.it/toscana/firenze/firenze/vendita-66120a19-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:26.686734+00:00",
+          "radius_match": "approximate",
+          "distance_m": 3557.229246731091,
+          "references": [
+            {
+              "publisher": "allaricerca.it",
+              "url": "https://www.allaricerca.it/2614519/Vendita-appartamento-VIA-NOMELLINI-Firenze-(FI)",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "bachecacase.com",
+              "url": "https://www.bachecacase.com/scheda-immobile/155069585/vendita-appartamento-firenze",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "bilocale.it",
+              "url": "https://www.bilocale.it/Firenze-VIA-NOMELLINI-Appartamento-Vendita-2756071.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "case24.it",
+              "url": "https://www.case24.it/immobili/toscana/firenze/firenze/4_camere_e_oltre_in_vendita/1788840680.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "ioaffitto.it",
+              "url": "https://www.ioaffitto.it/annuncio/immobilia2000-0010-1-015146272.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "pcase.it",
+              "url": "http://www.pcase.it/immobili/quadrilocale-vendita-firenze-le-torri-sc9705431/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "vetrinaannunci.com",
+              "url": "https://www.vetrinaannunci.com/dettaglio/firenze/vendita-immobili/civile-abitazione-le-torri/9598430",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "wikicasa.it",
+              "url": "https://www.wikicasa.it/annuncio/30771045",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712691027",
+          "caasa_url": "https://www.caasa.it/toscana/firenze/firenze/vendita-66159753-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:26.661733+00:00",
+          "radius_match": "approximate",
+          "distance_m": 3707.0723074700427,
+          "references": [
+            {
+              "publisher": "bachecacase.com",
+              "url": "https://www.bachecacase.com/scheda-immobile/155120968/vendita-appartamento-firenze",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "bancadellecase.it",
+              "url": "https://www.bancadellecase.it/appartamento-trilocale-in-vendita-a-firenze_5053432",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "casamix.it",
+              "url": "https://www.casamix.it/annuncio_986019_appartamento_92mq_firenze_firenze.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "firenze.bakeca.it",
+              "url": "https://firenze.bakeca.it/dettaglio/vendita-case/appartamento-a-firenze-rif-bllpvmnt2p-b6qa299298494",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/36805513/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/132371438/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "ioaffitto.it",
+              "url": "https://www.ioaffitto.it/annuncio/gestimm-5130623.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "prossimacasa.it",
+              "url": "https://www.prossimacasa.it/firenze/firenze/appartamento_in_vendita_campo-di-marte-le-cure-coverciano/20276035.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "wikicasa.it",
+              "url": "https://www.wikicasa.it/annuncio/30810045",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712335961",
+          "caasa_url": "https://www.caasa.it/toscana/firenze/firenze/vendita-66102c59-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:26.690399+00:00",
+          "radius_match": "approximate",
+          "distance_m": 3727.717204521939,
+          "references": [
+            {
+              "publisher": "bachecacase.com",
+              "url": "https://www.bachecacase.com/scheda-immobile/155022084/vendita-appartamento-firenze",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "bancadellecase.it",
+              "url": "https://www.bancadellecase.it/appartamento-quadrilocale-in-vendita-a-firenze_5047202",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "casamix.it",
+              "url": "https://www.casamix.it/annuncio_984536_appartamento_90mq_firenze_firenze.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "case24.it",
+              "url": "https://www.case24.it/immobili/toscana/firenze/firenze/3_camere_in_vendita/1788403373.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/36691860/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/132112836/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "ioaffitto.it",
+              "url": "https://www.ioaffitto.it/annuncio/gestimm-5125893.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "prossimacasa.it",
+              "url": "https://www.prossimacasa.it/firenze/firenze/appartamento_in_vendita_novoli-firenze-nova-firenze-nord/20274274.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "trovacasa.it",
+              "url": "https://www.trovacasa.it/annunci/fi-tc-49089-72959784",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "wikicasa.it",
+              "url": "https://www.wikicasa.it/annuncio/30731100",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712454285",
+          "caasa_url": "https://www.caasa.it/toscana/firenze/firenze/vendita-6611fa8d-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:28.486986+00:00",
+          "radius_match": "approximate",
+          "distance_m": 3727.717204521939,
+          "references": [
+            {
+              "publisher": "bilocale.it",
+              "url": "https://www.bilocale.it/Firenze-Novoli-/-Firenze-Nova-/-Firenze-Nord-Appartamento-Vendita-2754318.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712336350",
+          "caasa_url": "https://www.caasa.it/toscana/firenze/firenze/vendita-66102dde-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:28.475323+00:00",
+          "radius_match": "approximate",
+          "distance_m": 3829.5234396813817,
+          "references": [
+            {
+              "publisher": "bachecacase.com",
+              "url": "https://www.bachecacase.com/scheda-immobile/155048329/vendita-appartamento-firenze",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "bancadellecase.it",
+              "url": "https://www.bancadellecase.it/appartamento-quadrilocale-in-vendita-a-firenze_5049425",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "bilocale.it",
+              "url": "https://www.bilocale.it/Firenze-Legnaia-/-Soffiano-Appartamento-Vendita-2755591.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "casamix.it",
+              "url": "https://www.casamix.it/annuncio_984918_appartamento_95mq_firenze_firenze.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/36735281/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "ioaffitto.it",
+              "url": "https://www.ioaffitto.it/annuncio/gestimm-5127201.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "prossimacasa.it",
+              "url": "https://www.prossimacasa.it/firenze/firenze/appartamento_in_vendita_legnaia-soffiano/20274686.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "wikicasa.it",
+              "url": "https://www.wikicasa.it/annuncio/30753330",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712388312",
+          "caasa_url": "https://www.caasa.it/toscana/firenze/firenze/vendita-6610f8d8-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:26.694356+00:00",
+          "radius_match": "approximate",
+          "distance_m": 4164.284387930772,
+          "references": [
+            {
+              "publisher": "case24.it",
+              "url": "https://www.case24.it/immobili/toscana/firenze/firenze/2_camere_in_vendita/1783564405.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/36074895/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "trovacasa.it",
+              "url": "https://www.trovacasa.it/annunci/fi-tc-51662-72100261",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712599005",
+          "caasa_url": "https://www.caasa.it/toscana/firenze/firenze/vendita-66142fdd-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:28.501871+00:00",
+          "radius_match": "approximate",
+          "distance_m": 4443.768864974982,
+          "references": [
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/36787712/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "webimmobiliare.com",
+              "url": "http://www.webimmobiliare.com/immobili/TOSCANA/FIRENZE/FIRENZE--ZONA-GAVINANA---EUROPA---FI-SUD-/VENDITA-APPARTAMENTO-FIRENZE--ZONA-GAVINANA---EUROPA---FI-SUD--FIRENZE-SUD-2904178.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712633349",
+          "caasa_url": "https://www.caasa.it/toscana/firenze/firenze/vendita-6614b605-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:26.648810+00:00",
+          "radius_match": "approximate",
+          "distance_m": 4660.40539355541,
+          "references": [
+            {
+              "publisher": "allaricerca.it",
+              "url": "https://www.allaricerca.it/2616959/Vendita-appartamento-Via-Gherardo-Silvani-Firenze-(FI)",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "bachecacase.com",
+              "url": "https://www.bachecacase.com/scheda-immobile/155093368/vendita-bilocale-firenze",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "bancadellecase.it",
+              "url": "https://www.bancadellecase.it/appartamento-bilocale-in-vendita-a-firenze_5051456",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "bilocale.it",
+              "url": "https://www.bilocale.it/Firenze-Via-Gherardo-Silvani-Appartamento-Vendita-2757603.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "firenze.bakeca.it",
+              "url": "https://firenze.bakeca.it/dettaglio/vendita-case/bilocale-in-vendita-a-firenze-galluzzo-xs5e299245920",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/36763201/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/132287618/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "ioaffitto.it",
+              "url": "https://www.ioaffitto.it/annuncio/agim-1118032.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "it.easyavvisi.com",
+              "url": "https://it.easyavvisi.com/via-gherardo-silvani-bilocale-66mq-firenze-Pc7587fcf32f3eee0720e8965b877176a",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "pcase.it",
+              "url": "http://www.pcase.it/immobili/bilocale-vendita-via-gherardo-silvani-firenze-sc9706437/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "vetrinaannunci.com",
+              "url": "https://www.vetrinaannunci.com/dettaglio/firenze/vendita-immobili/appartamento-bilocale-galluzzo-firenze/9605065",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "wikicasa.it",
+              "url": "https://www.wikicasa.it/annuncio/30785139",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712463951",
+          "caasa_url": "https://www.caasa.it/toscana/firenze/firenze/vendita-6612204f-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:28.495762+00:00",
+          "radius_match": "approximate",
+          "distance_m": 4735.339208780161,
+          "references": [
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/132154540/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "trovacasa.it",
+              "url": "https://www.trovacasa.it/annunci/fi-tc-24793-72976748",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712811609",
+          "caasa_url": "https://www.caasa.it/toscana/firenze/firenze/vendita-66176e59-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:28.489636+00:00",
+          "radius_match": "approximate",
+          "distance_m": 4765.084807965127,
+          "references": [
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/36751743/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/132239324/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "trovacasa.it",
+              "url": "https://www.trovacasa.it/annunci/fi-tc-11795-73021747",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712559100",
+          "caasa_url": "https://www.caasa.it/toscana/firenze/firenze/vendita-661393fc-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:28.470455+00:00",
+          "radius_match": "approximate",
+          "distance_m": 4880.58429827682,
+          "references": [
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/36757655/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/132253920/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "risorseimmobiliari.it",
+              "url": "https://www.risorseimmobiliari.it/firenze/vendita-appartamento-firenze-varlungo-rovezzano-5123890.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "trovacasa.it",
+              "url": "https://www.trovacasa.it/annunci/fi-tc-80712-73031607",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "wikicasa.it",
+              "url": "https://www.wikicasa.it/annuncio/30781716",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "location": "Milano, MI",
+      "query": {
+        "latitude": 45.46427,
+        "longitude": 9.18951,
+        "radius_m": 5000,
+        "property_types": [
+          "residential"
+        ],
+        "country": null,
+        "include_unlocated": false
+      },
+      "status": "partial",
+      "matched_listings": 34,
+      "publisher_references": [
+        {
+          "publisher": "allaricerca.it",
+          "matched_listings": 6,
+          "distinct_urls": 6,
+          "observed_via": [
+            "caasa"
+          ],
+          "verification": "not_fetched"
+        },
+        {
+          "publisher": "bachecacase.com",
+          "matched_listings": 2,
+          "distinct_urls": 2,
+          "observed_via": [
+            "caasa"
+          ],
+          "verification": "not_fetched"
+        },
+        {
+          "publisher": "bancadellecase.it",
+          "matched_listings": 7,
+          "distinct_urls": 7,
+          "observed_via": [
+            "caasa"
+          ],
+          "verification": "not_fetched"
+        },
+        {
+          "publisher": "bilocale.it",
+          "matched_listings": 3,
+          "distinct_urls": 3,
+          "observed_via": [
+            "caasa"
+          ],
+          "verification": "not_fetched"
+        },
+        {
+          "publisher": "casamix.it",
+          "matched_listings": 1,
+          "distinct_urls": 1,
+          "observed_via": [
+            "caasa"
+          ],
+          "verification": "not_fetched"
+        },
+        {
+          "publisher": "case24.it",
+          "matched_listings": 4,
+          "distinct_urls": 4,
+          "observed_via": [
+            "caasa"
+          ],
+          "verification": "not_fetched"
+        },
+        {
+          "publisher": "idealista.it",
+          "matched_listings": 24,
+          "distinct_urls": 24,
+          "observed_via": [
+            "caasa"
+          ],
+          "verification": "not_fetched"
+        },
+        {
+          "publisher": "immobiliare-italia.it",
+          "matched_listings": 1,
+          "distinct_urls": 1,
+          "observed_via": [
+            "caasa"
+          ],
+          "verification": "not_fetched"
+        },
+        {
+          "publisher": "immobiliare.it",
+          "matched_listings": 29,
+          "distinct_urls": 29,
+          "observed_via": [
+            "caasa"
+          ],
+          "verification": "not_fetched"
+        },
+        {
+          "publisher": "ioaffitto.it",
+          "matched_listings": 4,
+          "distinct_urls": 4,
+          "observed_via": [
+            "caasa"
+          ],
+          "verification": "not_fetched"
+        },
+        {
+          "publisher": "it.easyavvisi.com",
+          "matched_listings": 2,
+          "distinct_urls": 2,
+          "observed_via": [
+            "caasa"
+          ],
+          "verification": "not_fetched"
+        },
+        {
+          "publisher": "milano.bakeca.it",
+          "matched_listings": 1,
+          "distinct_urls": 1,
+          "observed_via": [
+            "caasa"
+          ],
+          "verification": "not_fetched"
+        },
+        {
+          "publisher": "pcase.it",
+          "matched_listings": 8,
+          "distinct_urls": 8,
+          "observed_via": [
+            "caasa"
+          ],
+          "verification": "not_fetched"
+        },
+        {
+          "publisher": "prossimacasa.it",
+          "matched_listings": 1,
+          "distinct_urls": 1,
+          "observed_via": [
+            "caasa"
+          ],
+          "verification": "not_fetched"
+        },
+        {
+          "publisher": "risorseimmobiliari.it",
+          "matched_listings": 1,
+          "distinct_urls": 1,
+          "observed_via": [
+            "caasa"
+          ],
+          "verification": "not_fetched"
+        },
+        {
+          "publisher": "trovacasa.it",
+          "matched_listings": 17,
+          "distinct_urls": 17,
+          "observed_via": [
+            "caasa"
+          ],
+          "verification": "not_fetched"
+        },
+        {
+          "publisher": "vetrinaannunci.com",
+          "matched_listings": 1,
+          "distinct_urls": 1,
+          "observed_via": [
+            "caasa"
+          ],
+          "verification": "not_fetched"
+        },
+        {
+          "publisher": "wikicasa.it",
+          "matched_listings": 21,
+          "distinct_urls": 21,
+          "observed_via": [
+            "caasa"
+          ],
+          "verification": "not_fetched"
+        }
+      ],
+      "sources": [
+        {
+          "source": "caasa",
+          "status": "partial",
+          "count": 36,
+          "warnings": [
+            "Caasa aggregation is bounded to the query municipality and immediate neighbours; page/city caps can miss listings.",
+            "municipality request limit reached; coverage is incomplete",
+            "page limit reached; coverage is incomplete"
+          ],
+          "error": null
+        }
+      ],
+      "evidence": [
+        {
+          "caasa_id": "1712235970",
+          "caasa_url": "https://www.caasa.it/lombardia/milano/milano/vendita-660ea5c2-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:43.621527+00:00",
+          "radius_match": "approximate",
+          "distance_m": 1712.0510511499097,
+          "references": [
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/35855572/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/129481034/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "risorseimmobiliari.it",
+              "url": "https://www.risorseimmobiliari.it/milano/vendita-appartamento-milano-5122416.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "trovacasa.it",
+              "url": "https://www.trovacasa.it/annunci/mi-tc-87309-72978458",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "wikicasa.it",
+              "url": "https://www.wikicasa.it/annuncio/30747954",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712690971",
+          "caasa_url": "https://www.caasa.it/lombardia/milano/milano/vendita-6615971b-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:45.605837+00:00",
+          "radius_match": "approximate",
+          "distance_m": 1846.998594825453,
+          "references": [
+            {
+              "publisher": "allaricerca.it",
+              "url": "https://www.allaricerca.it/2617508/Vendita-appartamento-Via-Giannone-10-Milano-(MI)",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "bancadellecase.it",
+              "url": "https://www.bancadellecase.it/appartamento-bilocale-in-vendita-a-milano_5053359",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/36799412/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "pcase.it",
+              "url": "http://www.pcase.it/annuncio_appartamento-in-vendita-a-milano-arena_sc9708084/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712772409",
+          "caasa_url": "https://www.caasa.it/lombardia/milano/milano/vendita-6616d539-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:45.612755+00:00",
+          "radius_match": "approximate",
+          "distance_m": 1848.4308401910662,
+          "references": [
+            {
+              "publisher": "allaricerca.it",
+              "url": "https://www.allaricerca.it/2617507/Vendita-appartamento-Via-Giannone-10-Milano-(MI)",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "bancadellecase.it",
+              "url": "https://www.bancadellecase.it/appartamento-bilocale-in-vendita-a-milano_5053358",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/36799413/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "pcase.it",
+              "url": "http://www.pcase.it/annuncio_appartamento-in-vendita-a-milano-arena_sc9708075/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712772408",
+          "caasa_url": "https://www.caasa.it/lombardia/milano/milano/vendita-6616d538-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:45.619291+00:00",
+          "radius_match": "approximate",
+          "distance_m": 1870.920211724442,
+          "references": [
+            {
+              "publisher": "allaricerca.it",
+              "url": "https://www.allaricerca.it/2617506/Vendita-appartamento-Via-Giannone-10-Milano-(MI)",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "bancadellecase.it",
+              "url": "https://www.bancadellecase.it/appartamento-bilocale-in-vendita-a-milano_5053354",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/36799510/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "pcase.it",
+              "url": "http://www.pcase.it/annuncio_appartamento-in-vendita-a-milano-arena_sc9708074/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712504137",
+          "caasa_url": "https://www.caasa.it/lombardia/milano/milano/vendita-6612bd49-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:43.659154+00:00",
+          "radius_match": "approximate",
+          "distance_m": 1908.9819770690317,
+          "references": [
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/36737755/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/132204224/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "trovacasa.it",
+              "url": "https://www.trovacasa.it/annunci/mi-tc-39475-73004020",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "wikicasa.it",
+              "url": "https://www.wikicasa.it/annuncio/30763974",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712704978",
+          "caasa_url": "https://www.caasa.it/lombardia/milano/milano/vendita-6615cdd2-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:45.640195+00:00",
+          "radius_match": "approximate",
+          "distance_m": 2122.5548929678803,
+          "references": [
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/128418226/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "ioaffitto.it",
+              "url": "https://www.ioaffitto.it/annuncio/gi2-8437-134.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "pcase.it",
+              "url": "http://www.pcase.it/annuncio_appartamento-in-vendita-a-milano-xxii-marzo_sc9672251/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "trovacasa.it",
+              "url": "https://www.trovacasa.it/annunci/mi-tc-88762-71263734",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712812751",
+          "caasa_url": "https://www.caasa.it/lombardia/milano/milano/vendita-661772cf-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:45.610493+00:00",
+          "radius_match": "approximate",
+          "distance_m": 2127.395085719737,
+          "references": [
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/36747223/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/132232040/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "trovacasa.it",
+              "url": "https://www.trovacasa.it/annunci/mi-tc-6101-73023362",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712504136",
+          "caasa_url": "https://www.caasa.it/lombardia/milano/milano/vendita-6612bd48-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:43.646284+00:00",
+          "radius_match": "approximate",
+          "distance_m": 2176.0382541014123,
+          "references": [
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/36737485/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/132203426/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "wikicasa.it",
+              "url": "https://www.wikicasa.it/annuncio/30763995",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712612016",
+          "caasa_url": "https://www.caasa.it/lombardia/milano/milano/vendita-661462b0-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:43.632488+00:00",
+          "radius_match": "approximate",
+          "distance_m": 2196.559855416304,
+          "references": [
+            {
+              "publisher": "allaricerca.it",
+              "url": "https://www.allaricerca.it/2614793/Vendita-appartamento-Via-Ercole-Ferrario-Milano-(MI)",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "case24.it",
+              "url": "https://www.case24.it/immobili/lombardia/milano/milano/3_camere_in_vendita/1788938511.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/36754330/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/132294074/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712817721",
+          "caasa_url": "https://www.caasa.it/lombardia/milano/milano/vendita-66178639-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:45.630342+00:00",
+          "radius_match": "approximate",
+          "distance_m": 2317.5762632923697,
+          "references": [
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/36747837/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/132287566/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "trovacasa.it",
+              "url": "https://www.trovacasa.it/annunci/mi-tc-28007-73032068",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712559219",
+          "caasa_url": "https://www.caasa.it/lombardia/milano/milano/vendita-66139473-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:43.662272+00:00",
+          "radius_match": "approximate",
+          "distance_m": 2663.1048781288837,
+          "references": [
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/132238446/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "wikicasa.it",
+              "url": "https://www.wikicasa.it/annuncio/30779682",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712520895",
+          "caasa_url": "https://www.caasa.it/lombardia/milano/milano/vendita-6612febf-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:43.655974+00:00",
+          "radius_match": "approximate",
+          "distance_m": 2695.5551407771,
+          "references": [
+            {
+              "publisher": "case24.it",
+              "url": "https://www.case24.it/immobili/lombardia/milano/milano/mono_e_mini_in_vendita/1784608453.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/32462290/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/119864164/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "trovacasa.it",
+              "url": "https://www.trovacasa.it/annunci/mi-tc-80281-72539526",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "wikicasa.it",
+              "url": "https://www.wikicasa.it/annuncio/28430397",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712769667",
+          "caasa_url": "https://www.caasa.it/lombardia/milano/milano/vendita-6616ca83-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:43.640840+00:00",
+          "radius_match": "approximate",
+          "distance_m": 2728.3863863274873,
+          "references": [
+            {
+              "publisher": "allaricerca.it",
+              "url": "https://www.allaricerca.it/2616792/Vendita-appartamento-Via-Andrea-Doria-8-Milano-(MI)",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/132342954/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "wikicasa.it",
+              "url": "https://www.wikicasa.it/annuncio/30796920",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712607256",
+          "caasa_url": "https://www.caasa.it/lombardia/milano/milano/vendita-66145018-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:43.627956+00:00",
+          "radius_match": "approximate",
+          "distance_m": 2781.3901967310867,
+          "references": [
+            {
+              "publisher": "bancadellecase.it",
+              "url": "https://www.bancadellecase.it/appartamento-quadrilocale-in-vendita-a-milano_5052336",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "case24.it",
+              "url": "https://www.case24.it/immobili/lombardia/milano/milano/3_camere_in_vendita/1789099286.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/132330404/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "it.easyavvisi.com",
+              "url": "https://it.easyavvisi.com/appartamento-quadrilocale-189mq-milano-Pf3f07e39a6369ccd593a8c60ca45cc56",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "wikicasa.it",
+              "url": "https://www.wikicasa.it/annuncio/30794598",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712811690",
+          "caasa_url": "https://www.caasa.it/lombardia/milano/milano/vendita-66176eaa-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:45.624731+00:00",
+          "radius_match": "approximate",
+          "distance_m": 2821.171253394714,
+          "references": [
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/132230834/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "trovacasa.it",
+              "url": "https://www.trovacasa.it/annunci/mi-tc-16107-73021891",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712503428",
+          "caasa_url": "https://www.caasa.it/lombardia/milano/milano/vendita-6612ba84-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:43.643533+00:00",
+          "radius_match": "approximate",
+          "distance_m": 2849.754204843748,
+          "references": [
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/132236860/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "wikicasa.it",
+              "url": "https://www.wikicasa.it/annuncio/30779043",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712462972",
+          "caasa_url": "https://www.caasa.it/lombardia/milano/milano/vendita-66121c7c-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:43.638045+00:00",
+          "radius_match": "approximate",
+          "distance_m": 2893.5561150762883,
+          "references": [
+            {
+              "publisher": "bachecacase.com",
+              "url": "https://www.bachecacase.com/scheda-immobile/155069534/vendita-appartamento-milano",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "bilocale.it",
+              "url": "https://www.bilocale.it/Milano-Via-Tortona,-76-Appartamento-Vendita-2757201.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/36748311/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/132225262/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "ioaffitto.it",
+              "url": "https://www.ioaffitto.it/annuncio/spio-2745008.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "milano.bakeca.it",
+              "url": "https://milano.bakeca.it/dettaglio/vendita-case/appartamento-milano-rif-cod-rif-3337661vrg-2bgg299190286",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "trovacasa.it",
+              "url": "https://www.trovacasa.it/annunci/mi-tc-29073-73012858",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "wikicasa.it",
+              "url": "https://www.wikicasa.it/annuncio/30766809",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712276368",
+          "caasa_url": "https://www.caasa.it/lombardia/milano/milano/vendita-660f4390-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:43.635225+00:00",
+          "radius_match": "approximate",
+          "distance_m": 2897.208806113146,
+          "references": [
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/34015247/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/132010944/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "trovacasa.it",
+              "url": "https://www.trovacasa.it/annunci/mi-tc-22916-72914844",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712376112",
+          "caasa_url": "https://www.caasa.it/lombardia/milano/milano/vendita-6610c930-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:45.621928+00:00",
+          "radius_match": "approximate",
+          "distance_m": 2972.989019007113,
+          "references": [
+            {
+              "publisher": "bachecacase.com",
+              "url": "https://www.bachecacase.com/scheda-immobile/155036310/vendita-appartamento-milano",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "bancadellecase.it",
+              "url": "https://www.bancadellecase.it/appartamento-bilocale-in-vendita-a-milano_5048329",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "bilocale.it",
+              "url": "https://www.bilocale.it/Milano-Lodi-Appartamento-Vendita-2755134.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "casamix.it",
+              "url": "https://www.casamix.it/annuncio_984708_appartamento_87mq_milano_milano.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/36725665/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/132162862/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "ioaffitto.it",
+              "url": "https://www.ioaffitto.it/annuncio/gestimm-5126607.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "prossimacasa.it",
+              "url": "https://www.prossimacasa.it/milano/milano/appartamento_in_vendita_lodi/20274461.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "wikicasa.it",
+              "url": "https://www.wikicasa.it/annuncio/30743439",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712812115",
+          "caasa_url": "https://www.caasa.it/lombardia/milano/milano/vendita-66177053-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:43.665476+00:00",
+          "radius_match": "approximate",
+          "distance_m": 3081.851117122451,
+          "references": [
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/132249068/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "trovacasa.it",
+              "url": "https://www.trovacasa.it/annunci/mi-tc-22916-73022545",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712699860",
+          "caasa_url": "https://www.caasa.it/lombardia/milano/milano/vendita-6615b9d4-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:43.625814+00:00",
+          "radius_match": "approximate",
+          "distance_m": 3131.576019339569,
+          "references": [
+            {
+              "publisher": "trovacasa.it",
+              "url": "https://www.trovacasa.it/annunci/mi-tc-16027-72959685",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712571115",
+          "caasa_url": "https://www.caasa.it/lombardia/milano/milano/vendita-6613c2eb-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:43.630194+00:00",
+          "radius_match": "approximate",
+          "distance_m": 3210.8179296010126,
+          "references": [
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/36767835/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "wikicasa.it",
+              "url": "https://www.wikicasa.it/annuncio/30789033",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712652779",
+          "caasa_url": "https://www.caasa.it/lombardia/milano/milano/vendita-661501eb-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:45.601240+00:00",
+          "radius_match": "approximate",
+          "distance_m": 3384.7122686305333,
+          "references": [
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/132333556/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "wikicasa.it",
+              "url": "https://www.wikicasa.it/annuncio/30803274",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712354362",
+          "caasa_url": "https://www.caasa.it/lombardia/milano/milano/vendita-6610743a-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:45.603762+00:00",
+          "radius_match": "approximate",
+          "distance_m": 3413.6431714768823,
+          "references": [
+            {
+              "publisher": "allaricerca.it",
+              "url": "https://www.allaricerca.it/2614434/Vendita-appartamento-Via-Tolentino-5-Milano-(MI)",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/36738835/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/132206550/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "trovacasa.it",
+              "url": "https://www.trovacasa.it/annunci/mi-tc-85054-73011249",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "wikicasa.it",
+              "url": "https://www.wikicasa.it/annuncio/30761502",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712607243",
+          "caasa_url": "https://www.caasa.it/lombardia/milano/milano/vendita-6614500b-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:45.608032+00:00",
+          "radius_match": "approximate",
+          "distance_m": 3545.9686942867597,
+          "references": [
+            {
+              "publisher": "bilocale.it",
+              "url": "https://www.bilocale.it/Milano-Via-Cardinale-Mezzofanti-Appartamento-Vendita-2757403.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/36777060/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "immobiliare-italia.it",
+              "url": "https://www.immobiliare-italia.it/1482372/appartamento-vendita-milano/bilocale-da-ristrutturare-in-via-mezzofanti-41-m4-argonne.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/132329800/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "ioaffitto.it",
+              "url": "https://www.ioaffitto.it/annuncio/gr-1482372.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "pcase.it",
+              "url": "http://www.pcase.it/immobili/bilocale-vendita-milano-sc9706978/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "vetrinaannunci.com",
+              "url": "https://www.vetrinaannunci.com/dettaglio/milano/vendita-immobili/appartamento-vendita-milano/9604550",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "wikicasa.it",
+              "url": "https://www.wikicasa.it/annuncio/30794748",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1707009228",
+          "caasa_url": "https://www.caasa.it/lombardia/milano/milano/vendita-65bee4cc-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:43.623713+00:00",
+          "radius_match": "approximate",
+          "distance_m": 3635.6237115805275,
+          "references": [
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/35703785/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/129054746/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "trovacasa.it",
+              "url": "https://www.trovacasa.it/annunci/mi-tc-38830-71610759",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712594357",
+          "caasa_url": "https://www.caasa.it/lombardia/milano/milano/vendita-66141db5-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:43.672612+00:00",
+          "radius_match": "approximate",
+          "distance_m": 3734.4302522021176,
+          "references": [
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/36790231/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/132334686/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "pcase.it",
+              "url": "http://www.pcase.it/immobili/trilocale-vendita-milano-sc9707166/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "wikicasa.it",
+              "url": "https://www.wikicasa.it/annuncio/30795804",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712053147",
+          "caasa_url": "https://www.caasa.it/lombardia/milano/milano/vendita-660bdb9b-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:43.650225+00:00",
+          "radius_match": "approximate",
+          "distance_m": 4000.0482659611234,
+          "references": [
+            {
+              "publisher": "bancadellecase.it",
+              "url": "https://www.bancadellecase.it/appartamento-trilocale-in-vendita-a-milano_5045029",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "case24.it",
+              "url": "https://www.case24.it/immobili/lombardia/milano/milano/2_camere_in_vendita/1788235345.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/36671479/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/132178232/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "it.easyavvisi.com",
+              "url": "https://it.easyavvisi.com/appartamento-trilocale-88mq-milano-P02040fe05dbafed4bcbc63aba795efaf",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "trovacasa.it",
+              "url": "https://www.trovacasa.it/annunci/mi-tc-11500-72993959",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "wikicasa.it",
+              "url": "https://www.wikicasa.it/annuncio/30710625",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1710217118",
+          "caasa_url": "https://www.caasa.it/lombardia/milano/milano/vendita-65efd79e-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:43.653093+00:00",
+          "radius_match": "approximate",
+          "distance_m": 4085.27128765723,
+          "references": [
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/36246040/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/130916748/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "trovacasa.it",
+              "url": "https://www.trovacasa.it/annunci/mi-tc-34885-72421543",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712621851",
+          "caasa_url": "https://www.caasa.it/lombardia/milano/milano/vendita-6614891b-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:45.657283+00:00",
+          "radius_match": "approximate",
+          "distance_m": 4109.116060900958,
+          "references": [
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/36789804/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/132342750/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "wikicasa.it",
+              "url": "https://www.wikicasa.it/annuncio/30798210",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712818380",
+          "caasa_url": "https://www.caasa.it/lombardia/milano/milano/vendita-661788cc-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:43.676288+00:00",
+          "radius_match": "approximate",
+          "distance_m": 4545.649635790238,
+          "references": [
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/36756713/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/132257682/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "trovacasa.it",
+              "url": "https://www.trovacasa.it/annunci/mi-tc-49305-73033015",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "wikicasa.it",
+              "url": "https://www.wikicasa.it/annuncio/30785061",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712621932",
+          "caasa_url": "https://www.caasa.it/lombardia/milano/milano/vendita-6614896c-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:45.653604+00:00",
+          "radius_match": "approximate",
+          "distance_m": 4551.507095781712,
+          "references": [
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/36787393/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/132340556/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "pcase.it",
+              "url": "http://www.pcase.it/immobili/trilocale-ristrutturato-milano-sc9707157/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "wikicasa.it",
+              "url": "https://www.wikicasa.it/annuncio/30797694",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712606918",
+          "caasa_url": "https://www.caasa.it/lombardia/milano/milano/vendita-66144ec6-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:45.650103+00:00",
+          "radius_match": "approximate",
+          "distance_m": 4706.4198638935895,
+          "references": [
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/132300078/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "wikicasa.it",
+              "url": "https://www.wikicasa.it/annuncio/30798687",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712591799",
+          "caasa_url": "https://www.caasa.it/lombardia/milano/milano/vendita-661413b7-opinione.html",
+          "retrieved_at": "2026-09-14T20:06:43.668937+00:00",
+          "radius_match": "approximate",
+          "distance_m": 4881.398601433719,
+          "references": [
+            {
+              "publisher": "bancadellecase.it",
+              "url": "https://www.bancadellecase.it/appartamento-bilocale-in-vendita-a-milano_5050723",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/36747042/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/132249602/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "pcase.it",
+              "url": "http://www.pcase.it/immobili/bilocale-ristrutturato-milano-sc9705828/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "trovacasa.it",
+              "url": "https://www.trovacasa.it/annunci/mi-tc-6580-73025174",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "wikicasa.it",
+              "url": "https://www.wikicasa.it/annuncio/30775251",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "location": "Roma, RM",
+      "query": {
+        "latitude": 41.89193,
+        "longitude": 12.51133,
+        "radius_m": 5000,
+        "property_types": [
+          "residential"
+        ],
+        "country": null,
+        "include_unlocated": false
+      },
+      "status": "partial",
+      "matched_listings": 14,
+      "publisher_references": [
+        {
+          "publisher": "allaricerca.it",
+          "matched_listings": 3,
+          "distinct_urls": 3,
+          "observed_via": [
+            "caasa"
+          ],
+          "verification": "not_fetched"
+        },
+        {
+          "publisher": "bachecacase.com",
+          "matched_listings": 4,
+          "distinct_urls": 4,
+          "observed_via": [
+            "caasa"
+          ],
+          "verification": "not_fetched"
+        },
+        {
+          "publisher": "bancadellecase.it",
+          "matched_listings": 5,
+          "distinct_urls": 5,
+          "observed_via": [
+            "caasa"
+          ],
+          "verification": "not_fetched"
+        },
+        {
+          "publisher": "bilocale.it",
+          "matched_listings": 3,
+          "distinct_urls": 3,
+          "observed_via": [
+            "caasa"
+          ],
+          "verification": "not_fetched"
+        },
+        {
+          "publisher": "casamix.it",
+          "matched_listings": 1,
+          "distinct_urls": 1,
+          "observed_via": [
+            "caasa"
+          ],
+          "verification": "not_fetched"
+        },
+        {
+          "publisher": "case24.it",
+          "matched_listings": 1,
+          "distinct_urls": 1,
+          "observed_via": [
+            "caasa"
+          ],
+          "verification": "not_fetched"
+        },
+        {
+          "publisher": "idealista.it",
+          "matched_listings": 11,
+          "distinct_urls": 11,
+          "observed_via": [
+            "caasa"
+          ],
+          "verification": "not_fetched"
+        },
+        {
+          "publisher": "immobiliare.it",
+          "matched_listings": 12,
+          "distinct_urls": 12,
+          "observed_via": [
+            "caasa"
+          ],
+          "verification": "not_fetched"
+        },
+        {
+          "publisher": "ioaffitto.it",
+          "matched_listings": 4,
+          "distinct_urls": 4,
+          "observed_via": [
+            "caasa"
+          ],
+          "verification": "not_fetched"
+        },
+        {
+          "publisher": "it.easyavvisi.com",
+          "matched_listings": 4,
+          "distinct_urls": 4,
+          "observed_via": [
+            "caasa"
+          ],
+          "verification": "not_fetched"
+        },
+        {
+          "publisher": "pcase.it",
+          "matched_listings": 4,
+          "distinct_urls": 4,
+          "observed_via": [
+            "caasa"
+          ],
+          "verification": "not_fetched"
+        },
+        {
+          "publisher": "prossimacasa.it",
+          "matched_listings": 1,
+          "distinct_urls": 1,
+          "observed_via": [
+            "caasa"
+          ],
+          "verification": "not_fetched"
+        },
+        {
+          "publisher": "roma.bakeca.it",
+          "matched_listings": 3,
+          "distinct_urls": 3,
+          "observed_via": [
+            "caasa"
+          ],
+          "verification": "not_fetched"
+        },
+        {
+          "publisher": "trovacasa.it",
+          "matched_listings": 11,
+          "distinct_urls": 11,
+          "observed_via": [
+            "caasa"
+          ],
+          "verification": "not_fetched"
+        },
+        {
+          "publisher": "vetrinaannunci.com",
+          "matched_listings": 4,
+          "distinct_urls": 4,
+          "observed_via": [
+            "caasa"
+          ],
+          "verification": "not_fetched"
+        },
+        {
+          "publisher": "wikicasa.it",
+          "matched_listings": 10,
+          "distinct_urls": 10,
+          "observed_via": [
+            "caasa"
+          ],
+          "verification": "not_fetched"
+        }
+      ],
+      "sources": [
+        {
+          "source": "caasa",
+          "status": "partial",
+          "count": 36,
+          "warnings": [
+            "Caasa aggregation is bounded to the query municipality and immediate neighbours; page/city caps can miss listings.",
+            "page limit reached; coverage is incomplete"
+          ],
+          "error": null
+        }
+      ],
+      "evidence": [
+        {
+          "caasa_id": "1712434162",
+          "caasa_url": "https://www.caasa.it/lazio/roma/roma/vendita-6611abf2-opinione.html",
+          "retrieved_at": "2026-09-14T20:07:34.965793+00:00",
+          "radius_match": "approximate",
+          "distance_m": 1203.3661423636422,
+          "references": [
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/36748037/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "it.easyavvisi.com",
+              "url": "https://it.easyavvisi.com/via-vercelli-13-trilocale-90mq-roma-P93d186e767cab46b82d49ec889dc7547",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "trovacasa.it",
+              "url": "https://www.trovacasa.it/annunci/rm-tc-28828-73013906",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "vetrinaannunci.com",
+              "url": "https://www.vetrinaannunci.com/dettaglio/roma/vendita-immobili/appartamento-re-roma-roma/9598695",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712770670",
+          "caasa_url": "https://www.caasa.it/lazio/roma/roma/vendita-6616ce6e-opinione.html",
+          "retrieved_at": "2026-09-14T20:07:34.983402+00:00",
+          "radius_match": "approximate",
+          "distance_m": 1811.7935007533224,
+          "references": [
+            {
+              "publisher": "allaricerca.it",
+              "url": "https://www.allaricerca.it/2616992/Vendita-appartamento-Viale-Ippocrate-116-Roma-(RM)",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "bachecacase.com",
+              "url": "https://www.bachecacase.com/scheda-immobile/155093410/vendita-appartamento-roma",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "bancadellecase.it",
+              "url": "https://www.bancadellecase.it/appartamento-in-vendita-a-roma_5051479",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/36764643/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/132289802/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "ioaffitto.it",
+              "url": "https://www.ioaffitto.it/annuncio/agim-1118128.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "it.easyavvisi.com",
+              "url": "https://it.easyavvisi.com/viale-ippocrate-116-152mq-roma-P06ce3ef3d181e59b780e594456749164",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "pcase.it",
+              "url": "http://www.pcase.it/immobili/appartamento-con-terrazzo-viale-ippocrate-116-roma-sc9706416/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "roma.bakeca.it",
+              "url": "https://roma.bakeca.it/dettaglio/vendita-case/pentalocale-in-vendita-a-roma-9g48299244996",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "trovacasa.it",
+              "url": "https://www.trovacasa.it/annunci/rm-tc-50270-73033125",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "vetrinaannunci.com",
+              "url": "https://www.vetrinaannunci.com/dettaglio/roma/vendita-immobili/appartamento-pentalocale-roma/9605088",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "wikicasa.it",
+              "url": "https://www.wikicasa.it/annuncio/30786489",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712713984",
+          "caasa_url": "https://www.caasa.it/lazio/roma/roma/vendita-6615f100-opinione.html",
+          "retrieved_at": "2026-09-14T20:07:33.104183+00:00",
+          "radius_match": "approximate",
+          "distance_m": 1957.2790005453053,
+          "references": [
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/36732341/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/132187596/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "trovacasa.it",
+              "url": "https://www.trovacasa.it/annunci/rm-tc-76269-73005538",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "wikicasa.it",
+              "url": "https://www.wikicasa.it/annuncio/30778419",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712723380",
+          "caasa_url": "https://www.caasa.it/lazio/roma/roma/vendita-661615b4-opinione.html",
+          "retrieved_at": "2026-09-14T20:07:34.933854+00:00",
+          "radius_match": "approximate",
+          "distance_m": 2001.5881214251203,
+          "references": [
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/36744268/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/132224522/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "trovacasa.it",
+              "url": "https://www.trovacasa.it/annunci/rm-tc-16924-73015150",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712607101",
+          "caasa_url": "https://www.caasa.it/lazio/roma/roma/vendita-66144f7d-opinione.html",
+          "retrieved_at": "2026-09-14T20:07:33.096609+00:00",
+          "radius_match": "approximate",
+          "distance_m": 2665.9678181610707,
+          "references": [
+            {
+              "publisher": "bachecacase.com",
+              "url": "https://www.bachecacase.com/scheda-immobile/155110246/vendita-appartamento-roma",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "bancadellecase.it",
+              "url": "https://www.bancadellecase.it/appartamento-plurilocale-in-vendita-a-roma_5052541",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "bilocale.it",
+              "url": "https://www.bilocale.it/Roma-Nomentano-Appartamento-Vendita-2759391.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "casamix.it",
+              "url": "https://www.casamix.it/annuncio_985719_appartamento_202mq_roma_roma.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "case24.it",
+              "url": "https://www.case24.it/immobili/lazio/roma/roma/4_camere_e_oltre_in_vendita/1789094357.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/36784639/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/132336628/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "ioaffitto.it",
+              "url": "https://www.ioaffitto.it/annuncio/gestimm-5128992.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "prossimacasa.it",
+              "url": "https://www.prossimacasa.it/roma/roma/appartamento_in_vendita_nomentano/20275655.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "wikicasa.it",
+              "url": "https://www.wikicasa.it/annuncio/30796431",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712576247",
+          "caasa_url": "https://www.caasa.it/lazio/roma/roma/vendita-6613d6f7-opinione.html",
+          "retrieved_at": "2026-09-14T20:07:34.938138+00:00",
+          "radius_match": "approximate",
+          "distance_m": 2993.351508029121,
+          "references": [
+            {
+              "publisher": "allaricerca.it",
+              "url": "https://www.allaricerca.it/2616991/Vendita-appartamento-Via-Vacuna-111-Roma-(RM)",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "bachecacase.com",
+              "url": "https://www.bachecacase.com/scheda-immobile/155093390/vendita-trilocale-roma",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "bancadellecase.it",
+              "url": "https://www.bancadellecase.it/appartamento-plurilocale-in-vendita-a-roma_5051478",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "bilocale.it",
+              "url": "https://www.bilocale.it/Roma-Via-Vacuna-Appartamento-Vendita-2757584.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/36766134/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "ioaffitto.it",
+              "url": "https://www.ioaffitto.it/annuncio/agim-1118172.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "it.easyavvisi.com",
+              "url": "https://it.easyavvisi.com/via-vacuna-111-5-vani-105mq-roma-Pfb70bee06121b66a123a0c2d66b468a1",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "pcase.it",
+              "url": "http://www.pcase.it/immobili/appartamento-con-terrazzo-via-vacuna-111-roma-sc9706417/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "roma.bakeca.it",
+              "url": "https://roma.bakeca.it/dettaglio/vendita-case/trilocale-in-vendita-a-roma-esd6299245546",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "vetrinaannunci.com",
+              "url": "https://www.vetrinaannunci.com/dettaglio/roma/vendita-immobili/appartamento-trilocale-roma/9605089",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "wikicasa.it",
+              "url": "https://www.wikicasa.it/annuncio/30787326",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712815145",
+          "caasa_url": "https://www.caasa.it/lazio/roma/roma/vendita-66177c29-opinione.html",
+          "retrieved_at": "2026-09-14T20:07:34.987406+00:00",
+          "radius_match": "approximate",
+          "distance_m": 3260.177603727012,
+          "references": [
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/36752970/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/132249984/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "trovacasa.it",
+              "url": "https://www.trovacasa.it/annunci/rm-tc-94799-73026946",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1708504387",
+          "caasa_url": "https://www.caasa.it/lazio/roma/roma/vendita-65d5b543-opinione.html",
+          "retrieved_at": "2026-09-14T20:07:33.109799+00:00",
+          "radius_match": "approximate",
+          "distance_m": 3860.3403036435416,
+          "references": [
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/129793750/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "trovacasa.it",
+              "url": "https://www.trovacasa.it/annunci/rm-tc-53972-71944819",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "wikicasa.it",
+              "url": "https://www.wikicasa.it/annuncio/30152434",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712571586",
+          "caasa_url": "https://www.caasa.it/lazio/roma/roma/vendita-6613c4c2-opinione.html",
+          "retrieved_at": "2026-09-14T20:07:34.947966+00:00",
+          "radius_match": "approximate",
+          "distance_m": 3960.595578743812,
+          "references": [
+            {
+              "publisher": "bancadellecase.it",
+              "url": "https://www.bancadellecase.it/appartamento-quadrilocale-in-vendita-a-roma_5051366",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/36766592/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/132290982/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "pcase.it",
+              "url": "http://www.pcase.it/immobili/quadrilocale-da-ristrutturare-roma-sc9706507/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "trovacasa.it",
+              "url": "https://www.trovacasa.it/annunci/rm-tc-14307-73030461",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "wikicasa.it",
+              "url": "https://www.wikicasa.it/annuncio/30786324",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712536757",
+          "caasa_url": "https://www.caasa.it/lazio/roma/roma/vendita-66133cb5-opinione.html",
+          "retrieved_at": "2026-09-14T20:07:34.969042+00:00",
+          "radius_match": "approximate",
+          "distance_m": 4197.264858927433,
+          "references": [
+            {
+              "publisher": "allaricerca.it",
+              "url": "https://www.allaricerca.it/2615712/Vendita-appartamento-Via-Antonino-Borz%C3%AC-12-Roma-(RM)",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "bachecacase.com",
+              "url": "https://www.bachecacase.com/scheda-immobile/155080488/vendita-bilocale-roma",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "bancadellecase.it",
+              "url": "https://www.bancadellecase.it/appartamento-plurilocale-in-vendita-a-roma_5050817",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "bilocale.it",
+              "url": "https://www.bilocale.it/Roma-Via-Antonino-Borz%C3%AC-Appartamento-Vendita-2756821.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/36756450/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/132255632/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "ioaffitto.it",
+              "url": "https://www.ioaffitto.it/annuncio/agim-1117837.html",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "it.easyavvisi.com",
+              "url": "https://it.easyavvisi.com/via-antonino-borzi-12-5-vani-67mq-roma-P9afa8628db3efab89a0f897612eb2ecd",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "pcase.it",
+              "url": "http://www.pcase.it/immobili/appartamento-vendita-via-antonino-borzi-12-roma-sc9705706/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "roma.bakeca.it",
+              "url": "https://roma.bakeca.it/dettaglio/vendita-case/bilocale-in-vendita-a-roma-cvg2299245240",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "trovacasa.it",
+              "url": "https://www.trovacasa.it/annunci/rm-tc-50270-73033123",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "vetrinaannunci.com",
+              "url": "https://www.vetrinaannunci.com/dettaglio/roma/vendita-immobili/appartamento-bilocale-roma/9601503",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "wikicasa.it",
+              "url": "https://www.wikicasa.it/annuncio/30776904",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712457784",
+          "caasa_url": "https://www.caasa.it/lazio/roma/roma/vendita-66120838-opinione.html",
+          "retrieved_at": "2026-09-14T20:07:34.956129+00:00",
+          "radius_match": "approximate",
+          "distance_m": 4463.0882246263045,
+          "references": [
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/36744709/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/132224362/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "trovacasa.it",
+              "url": "https://www.trovacasa.it/annunci/rm-tc-89019-73017204",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "wikicasa.it",
+              "url": "https://www.wikicasa.it/annuncio/30773793",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712558583",
+          "caasa_url": "https://www.caasa.it/lazio/roma/roma/vendita-661391f7-opinione.html",
+          "retrieved_at": "2026-09-14T20:07:33.098985+00:00",
+          "radius_match": "approximate",
+          "distance_m": 4611.524669865653,
+          "references": [
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/132292808/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "wikicasa.it",
+              "url": "https://www.wikicasa.it/annuncio/30787899",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712707038",
+          "caasa_url": "https://www.caasa.it/lazio/roma/roma/vendita-6615d5de-opinione.html",
+          "retrieved_at": "2026-09-14T20:07:34.950694+00:00",
+          "radius_match": "approximate",
+          "distance_m": 4759.8741377267515,
+          "references": [
+            {
+              "publisher": "idealista.it",
+              "url": "https://www.idealista.it/immobile/36728005/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/132179972/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "trovacasa.it",
+              "url": "https://www.trovacasa.it/annunci/rm-tc-48869-72996895",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "wikicasa.it",
+              "url": "https://www.wikicasa.it/annuncio/30760086",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        },
+        {
+          "caasa_id": "1712294955",
+          "caasa_url": "https://www.caasa.it/lazio/roma/roma/vendita-660f8c2b-opinione.html",
+          "retrieved_at": "2026-09-14T20:07:33.130086+00:00",
+          "radius_match": "approximate",
+          "distance_m": 4791.277439875859,
+          "references": [
+            {
+              "publisher": "immobiliare.it",
+              "url": "https://www.immobiliare.it/annunci/129175502/",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            },
+            {
+              "publisher": "trovacasa.it",
+              "url": "https://www.trovacasa.it/annunci/rm-tc-72420-72935189",
+              "observed_via": "caasa",
+              "verification": "not_fetched"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "requests": [
+    {
+      "method": "GET",
+      "url": "https://www.caasa.it/robots.txt"
+    },
+    {
+      "method": "GET",
+      "url": "https://www.caasa.it/city.jsp?lat=43.77925&lng=11.24626"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.caasa.it/explain.jsp"
+    },
+    {
+      "method": "GET",
+      "url": "https://www.caasa.it/firenze/firenze/appartamento-o-attico-o-baita-o-bifamiliare-o-bivano-o-bungalow-o-campidanese-o-caposchiera-o-casa-indipendente-o-casa-semindipendente-o-casale-o-dammuso-o-esavano-o-intera-palazzina-o-loft-o-mansarda-o-maso-o-monolocale-o-multiproprieta-o-multivano-o-pentavano-o-quadrivano-o-trivano-o-trullo-o-villa-o-villetta-a-schiera/in-vendita.html?l=e"
+    },
+    {
+      "method": "GET",
+      "url": "https://www.caasa.it/firenze/firenze/appartamento-o-attico-o-baita-o-bifamiliare-o-bivano-o-bungalow-o-campidanese-o-caposchiera-o-casa-indipendente-o-casa-semindipendente-o-casale-o-dammuso-o-esavano-o-intera-palazzina-o-loft-o-mansarda-o-maso-o-monolocale-o-multiproprieta-o-multivano-o-pentavano-o-quadrivano-o-trivano-o-trullo-o-villa-o-villetta-a-schiera/in-vendita.html?l=e&page=2"
+    },
+    {
+      "method": "GET",
+      "url": "https://www.caasa.it/city.jsp?lat=45.46427&lng=9.18951"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.caasa.it/explain.jsp"
+    },
+    {
+      "method": "GET",
+      "url": "https://www.caasa.it/milano/milano/appartamento-o-attico-o-baita-o-bifamiliare-o-bivano-o-bungalow-o-campidanese-o-caposchiera-o-casa-indipendente-o-casa-semindipendente-o-casale-o-dammuso-o-esavano-o-intera-palazzina-o-loft-o-mansarda-o-maso-o-monolocale-o-multiproprieta-o-multivano-o-pentavano-o-quadrivano-o-trivano-o-trullo-o-villa-o-villetta-a-schiera/in-vendita.html?l=e"
+    },
+    {
+      "method": "GET",
+      "url": "https://www.caasa.it/milano/milano/appartamento-o-attico-o-baita-o-bifamiliare-o-bivano-o-bungalow-o-campidanese-o-caposchiera-o-casa-indipendente-o-casa-semindipendente-o-casale-o-dammuso-o-esavano-o-intera-palazzina-o-loft-o-mansarda-o-maso-o-monolocale-o-multiproprieta-o-multivano-o-pentavano-o-quadrivano-o-trivano-o-trullo-o-villa-o-villetta-a-schiera/in-vendita.html?l=e&page=2"
+    },
+    {
+      "method": "GET",
+      "url": "https://www.caasa.it/city.jsp?lat=41.89193&lng=12.51133"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.caasa.it/explain.jsp"
+    },
+    {
+      "method": "GET",
+      "url": "https://www.caasa.it/roma/roma/appartamento-o-attico-o-baita-o-bifamiliare-o-bivano-o-bungalow-o-campidanese-o-caposchiera-o-casa-indipendente-o-casa-semindipendente-o-casale-o-dammuso-o-esavano-o-intera-palazzina-o-loft-o-mansarda-o-maso-o-monolocale-o-multiproprieta-o-multivano-o-pentavano-o-quadrivano-o-trivano-o-trullo-o-villa-o-villetta-a-schiera/in-vendita.html?l=e"
+    },
+    {
+      "method": "GET",
+      "url": "https://www.caasa.it/roma/roma/appartamento-o-attico-o-baita-o-bifamiliare-o-bivano-o-bungalow-o-campidanese-o-caposchiera-o-casa-indipendente-o-casa-semindipendente-o-casale-o-dammuso-o-esavano-o-intera-palazzina-o-loft-o-mansarda-o-maso-o-monolocale-o-multiproprieta-o-multivano-o-pentavano-o-quadrivano-o-trivano-o-trullo-o-villa-o-villetta-a-schiera/in-vendita.html?l=e&page=2"
+    }
+  ],
+  "finished_at": "2026-09-14T20:07:34.995881+00:00"
+}

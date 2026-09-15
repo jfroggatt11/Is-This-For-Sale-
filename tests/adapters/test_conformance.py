@@ -6,12 +6,14 @@ from pathlib import Path
 import pytest
 
 from itsfs.adapters.base import SourceError
+from itsfs.adapters.italy.caasa import CaasaAdapter
 from itsfs.adapters.italy.demanio import ROME, DemanioAdapter
 from itsfs.adapters.italy.kyero_feed import KyeroFeedAdapter
+from itsfs.adapters.italy.risorseimmobiliari import RisorseimmobiliariAdapter
 from itsfs.models import PROPERTY_TYPES, Listing
 
 FIXTURES = Path(__file__).parents[1] / "fixtures"
-CASES = ["demanio", "kyero"]
+CASES = ["demanio", "kyero", "risorseimmobiliari", "caasa", "idealista"]
 
 
 class FixtureHTTP:
@@ -22,6 +24,29 @@ class FixtureHTTP:
 
 @pytest.fixture(params=CASES)
 def adapter(request):
+    if request.param == "idealista":
+        from test_idealista import fixture_adapter
+
+        return fixture_adapter()
+    if request.param == "caasa":
+
+        class CaasaHTTP:
+            def get(self, url):
+                name = "caasa_city.json" if "/city.jsp?" in url else "caasa_search.html"
+                return (FIXTURES / name).read_bytes()
+
+            def post_form(self, url, data):
+                return b'{"canonical":"/firenze/firenze/appartamento/in-vendita.html?l=e"}'
+
+        return CaasaAdapter(CaasaHTTP())
+    if request.param == "risorseimmobiliari":
+
+        class RisorseHTTP:
+            def get(self, url):
+                name = "risorse_search.html" if "case_in-vendita" in url else "risorse_detail.html"
+                return (FIXTURES / name).read_bytes()
+
+        return RisorseimmobiliariAdapter(RisorseHTTP())
     http = FixtureHTTP()
     if request.param == "demanio":
         return DemanioAdapter(http, max_pages=1, now=lambda: datetime(2026, 9, 14, tzinfo=ROME))

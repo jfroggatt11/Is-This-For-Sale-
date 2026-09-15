@@ -2,7 +2,7 @@
 
 import json
 import re
-from dataclasses import asdict, dataclass, field
+from dataclasses import asdict, dataclass, field, replace
 from importlib.resources import files
 from pathlib import Path
 
@@ -41,14 +41,18 @@ class SourceSpec:
             raise ValueError("invalid source property types")
         if self.status not in {
             "working",
+            "experimental",
             "needs_access",
             "investigating",
             "rejected",
             "unavailable",
         }:
             raise ValueError("invalid registry status")
-        if self.enabled and (self.status != "working" or self.adapter not in {"demanio", "kyero"}):
-            raise ValueError("only implemented working adapters may be enabled")
+        if self.enabled and (
+            self.status not in {"working", "experimental"}
+            or self.adapter not in {"demanio", "kyero", "risorseimmobiliari", "caasa", "idealista"}
+        ):
+            raise ValueError("only implemented working or experimental adapters may be enabled")
         if self.enabled and not self.review:
             raise ValueError("enabled sources need an access-review reference")
 
@@ -63,6 +67,26 @@ class Registry:
             raise ValueError("duplicate source name")
         self.http = http or PoliteHTTP("IsThisForSale/0.1 (public property search CLI)")
         self.instances = {}
+
+    def enable_idealista_browser(self, backend="playwright"):
+        """Explicit opt-in: launch a fresh bundled Chromium process for each search."""
+        if backend != "playwright":
+            raise ValueError("only fresh isolated Chromium is supported")
+        self.specs = [
+            replace(
+                s,
+                enabled=True,
+                status="experimental",
+                adapter="idealista",
+                access_method="browser_dom",
+                property_types=["residential"],
+                location_precision="area_only",
+                options={"backend": backend},
+            )
+            if s.source == "idealista"
+            else s
+            for s in self.specs
+        ]
 
     def add_config(self, path: str) -> None:
         """Feed paths resolve relative to the config. Never dynamically import code from JSON."""
@@ -107,10 +131,22 @@ class Registry:
                 from .adapters.italy.demanio import DemanioAdapter
 
                 adapter = DemanioAdapter(self.http, **spec.options)
+            elif spec.adapter == "risorseimmobiliari":
+                from .adapters.italy.risorseimmobiliari import RisorseimmobiliariAdapter
+
+                adapter = RisorseimmobiliariAdapter(self.http, **spec.options)
+            elif spec.adapter == "caasa":
+                from .adapters.italy.caasa import CaasaAdapter
+
+                adapter = CaasaAdapter(self.http, **spec.options)
             elif spec.adapter == "kyero":
                 from .adapters.italy.kyero_feed import KyeroFeedAdapter
 
                 adapter = KyeroFeedAdapter(spec.source, spec.options["location"], self.http)
+            elif spec.adapter == "idealista":
+                from .adapters.italy.idealista import IdealistaAdapter
+
+                adapter = IdealistaAdapter(self.http, **spec.options)
             else:
                 raise SourceError("adapter not implemented")
             self.instances[spec.source] = adapter

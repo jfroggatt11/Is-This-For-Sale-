@@ -1,5 +1,6 @@
 """Conservative identity matching. Shared coordinates/prices alone are insufficient."""
 
+from dataclasses import replace
 from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 
 from .models import SearchHit
@@ -28,6 +29,13 @@ def deduplicate(hits: list[SearchHit]) -> list[SearchHit]:
             keys.append(("url", url))
         existing = next((seen[k] for k in keys if k in seen), None)
         if existing is not None:
+            refs = set(existing.listing.publisher_references) | set(listing.publisher_references)
+            existing.listing = replace(
+                existing.listing,
+                publisher_references=tuple(
+                    sorted(refs, key=lambda ref: (ref.publisher, ref.url, ref.observed_via))
+                ),
+            )
             existing.duplicates.append(
                 {"source": listing.source, "source_id": listing.source_id, "url": listing.url}
             )

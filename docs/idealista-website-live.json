@@ -1,0 +1,44 @@
+{
+  "evidence_type": "direct_website_browser_observation",
+  "captured_at": "2026-09-15T10:44:06.154000+00:00",
+  "source_search_url": "https://www.idealista.it/vendita-case/firenze-firenze/",
+  "search_heading_count": 6027,
+  "exhaustive": false,
+  "collected_detail_pages": 1,
+  "method": "Normal Chrome navigation; automatic device check completed without intervention; optional cookies declined; no login performed. Parser validated against selected factual DOM nodes transcribed from browser tool output and reconfirmed on the live page at captured_at.",
+  "limitations": [
+    "One browser session, not a standalone runtime transport.",
+    "Project owner subsequently waived the site-terms requirement on 2026-09-15; this does not establish operator consent.",
+    "No property coordinates or radius match established.",
+    "Advertised availability is not seller-confirmed."
+  ],
+  "listing": {
+    "source": "idealista",
+    "source_id": "35691213",
+    "title": "Trilocale in vendita in Via Niccolo' Piccinni, 42",
+    "url": "https://www.idealista.it/immobile/35691213/",
+    "price": 299000.0,
+    "currency": "EUR",
+    "property_type": "residential",
+    "latitude": null,
+    "longitude": null,
+    "location_precision": "unknown",
+    "area_m2": 78.0,
+    "bedrooms": null,
+    "address": "Via Niccolo' Piccinni, 42",
+    "municipality": "Firenze",
+    "description": null,
+    "retrieved_at": "2026-09-15T10:44:06.154000+00:00",
+    "raw": {
+      "acquisition": "supplied_browser_dom",
+      "price_kind": "asking_price",
+      "availability_basis": "displayed sale advertisement; seller availability unverified",
+      "coordinate_basis": "not established from supplied DOM",
+      "usable_area_m2": 70.0,
+      "rooms": 3,
+      "bathrooms": 2,
+      "parser_warnings": []
+    },
+    "publisher_references": []
+  }
+}

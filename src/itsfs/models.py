@@ -62,6 +62,32 @@ class SearchQuery:
 
 
 @dataclass(frozen=True)
+class PublisherReference:
+    """An aggregator's attribution, not independent verification of a listing."""
+
+    publisher: str
+    url: str
+    observed_via: str
+    verification: str = field(default="not_fetched", init=False)
+
+    def __post_init__(self) -> None:
+        p = urlsplit(self.url)
+        if (
+            p.scheme not in {"http", "https"}
+            or not p.hostname
+            or p.username
+            or p.password
+            or p.port
+            or p.hostname.removeprefix("www.") != self.publisher
+            or not self.observed_via
+            or p.query
+            or p.fragment
+            or any(c.isspace() or ord(c) < 32 for c in self.url)
+        ):
+            raise ValueError("invalid publisher reference")
+
+
+@dataclass(frozen=True)
 class Listing:
     source: str
     source_id: str
@@ -80,6 +106,7 @@ class Listing:
     description: str | None = None
     retrieved_at: datetime = field(default_factory=lambda: datetime.now(UTC))
     raw: dict[str, Any] = field(default_factory=dict)
+    publisher_references: tuple[PublisherReference, ...] = ()
 
     def __post_init__(self) -> None:
         if not all(
@@ -114,6 +141,9 @@ class Listing:
                 raise ValueError("listing URL must not contain credentials")
         if self.retrieved_at.tzinfo is None or self.retrieved_at.utcoffset() is None:
             raise ValueError("retrieved_at must be timezone-aware")
+        if any(not isinstance(ref, PublisherReference) for ref in self.publisher_references):
+            raise ValueError("publisher_references must contain PublisherReference values")
+        object.__setattr__(self, "publisher_references", tuple(self.publisher_references))
 
     def to_dict(self) -> dict:
         result = asdict(self)
@@ -155,8 +185,36 @@ class SearchReport:
     sources: list[SourceOutcome] = field(default_factory=list)
     warnings: list[str] = field(default_factory=list)
 
+    coverage: list[dict[str, str]] = field(default_factory=list)
+
+    def publisher_coverage(self) -> list[dict]:
+        """Counts refer to returned hits; publishers overlap and were not queried."""
+        counts = {}
+        for hit in self.results:
+            refs = hit.listing.publisher_references
+            for publisher in {ref.publisher for ref in refs}:
+                row = counts.setdefault(publisher, {"hits": 0, "urls": set(), "via": set()})
+                row["hits"] += 1
+                row["urls"].update(ref.url for ref in refs if ref.publisher == publisher)
+                row["via"].update(ref.observed_via for ref in refs if ref.publisher == publisher)
+        return [
+            {
+                "publisher": publisher,
+                "matched_listings": row["hits"],
+                "distinct_urls": len(row["urls"]),
+                "observed_via": sorted(row["via"]),
+                "verification": "not_fetched",
+            }
+            for publisher, row in sorted(counts.items())
+        ]
+
     def to_dict(self) -> dict:
         return {
+            "coverage": {
+                "exhaustive": False,
+                "catalogued_sources": self.coverage,
+                "publisher_references": self.publisher_coverage(),
+            },
             "query": asdict(self.query),
             "country": self.country,
             "status": self.status,

@@ -120,3 +120,58 @@ def test_robots_html_fails_closed(monkeypatch):
     with pytest.raises(AccessDenied, match="policy"):
         http.get("https://example.invalid/feed")
     assert len(calls) == 1
+
+
+def test_readonly_post_checks_robots_and_encodes_form(monkeypatch):
+    http, calls = setup(
+        monkeypatch,
+        lambda r: httpx.Response(
+            200,
+            text="User-agent: *\nAllow: /"
+            if r.url.path == "/robots.txt"
+            else '{"canonical":"/result"}',
+        ),
+    )
+    assert (
+        http.post_form("https://example.invalid/explain", {"query": "a & b"})
+        == b'{"canonical":"/result"}'
+    )
+    assert [r.method for r in calls] == ["GET", "POST"]
+    assert calls[-1].content == b"query=a+%26+b"
+    assert calls[-1].headers["Content-Type"].startswith("application/x-www-form-urlencoded")
+
+
+def test_post_denial_no_retry(monkeypatch):
+    http, calls = setup(
+        monkeypatch,
+        lambda r: httpx.Response(404) if r.url.path == "/robots.txt" else httpx.Response(429),
+    )
+    with pytest.raises(AccessDenied):
+        http.post_form("https://example.invalid/explain", {"query": "x"})
+    assert len(calls) == 2
+
+
+def test_post_obeys_robots(monkeypatch):
+    http, calls = setup(
+        monkeypatch, lambda r: httpx.Response(200, text="User-agent: *\nDisallow: /explain")
+    )
+    with pytest.raises(AccessDenied):
+        http.post_form("https://example.invalid/explain", {"query": "x"})
+    assert len(calls) == 1
+
+
+@pytest.mark.parametrize(
+    "challenge", [b"<title>Just a moment...</title>", b'<form id="challenge-form">']
+)
+def test_http_200_challenge_stops(monkeypatch, challenge):
+    http, calls = setup(
+        monkeypatch,
+        lambda r: (
+            httpx.Response(404)
+            if r.url.path == "/robots.txt"
+            else httpx.Response(200, content=challenge)
+        ),
+    )
+    with pytest.raises(AccessDenied, match="challenge"):
+        http.get("https://example.invalid/search")
+    assert len(calls) == 2

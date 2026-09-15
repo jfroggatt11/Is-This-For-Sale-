@@ -104,7 +104,7 @@ def test_load_failure_is_isolated_and_secret_not_logged():
 def test_unsupported_country_and_disabled_sources():
     r = Registry()
     assert SearchEngine(r).search(SearchQuery(48.85, 2.35)).status == "unsupported"
-    assert [s.source for s in r.relevant("IT")] == ["demanio"]
+    assert [s.source for s in r.relevant("IT")] == ["demanio", "risorseimmobiliari", "caasa"]
     assert r.relevant("IT", sources=["idealista"]) == []
     with pytest.raises(ValueError):
         r.relevant("IT", sources=["typo"])
@@ -195,3 +195,38 @@ def test_cli_synthetic_multisource_example(tmp_path, capsys, fixture_bytes):
     assert report["country"] == "IT" and len(report["sources"]) == 2
     assert len(report["results"]) == 4  # two URL merges; unlinked shops stay distinct
     assert report["results"][0]["duplicates"]
+
+
+def test_coverage_reports_disabled_unselected_and_queried():
+    registry = Registry(
+        [
+            spec("first"),
+            spec("second"),
+            replace(
+                spec("restricted"), enabled=False, status="needs_access", notes="requires agreement"
+            ),
+        ]
+    )
+    registry.instances["first"] = Adapter([])
+    report = SearchEngine(registry).search(SearchQuery(43.779, 11.246), sources=["first"])
+    coverage = report.to_dict()["coverage"]
+    assert coverage["exhaustive"] is False
+    assert {s["source"]: s["state"] for s in coverage["catalogued_sources"]} == {
+        "first": "queried",
+        "second": "not_selected",
+        "restricted": "needs_access",
+    }
+    registry.close()
+
+
+def test_three_live_factories_and_type_routing():
+    registry = Registry()
+    entries = registry.relevant("IT")
+    assert {registry.load(s).source_name for s in entries} == {
+        "demanio",
+        "risorseimmobiliari",
+        "caasa",
+    }
+    assert "risorseimmobiliari" not in {s.source for s in registry.relevant("IT", ["land"])}
+    assert all(s.review for s in registry.specs)
+    registry.close()

@@ -30,3 +30,10 @@ lookup. These are populated-place points, not property coordinates or boundaries
 Rebuild derived files with `scripts/prepare_geo_data.py CITIES_ZIP REGIONS_GEOJSON`.
 No geography downloads occur during ordinary searches. See `docs/GEO_DATA.md` for
 the input checksums of this release.
+
+## RisorseImmobiliari province routes
+
+`risorse_provinces.json` contains 107 factual public catalogue paths observed on
+https://www.risorseimmobiliari.it/ on 2026-09-14, associated with province codes from
+the bundled GeoNames gazetteer. No property data or source descriptions included.
+This routing table is not a license to the source inventory.

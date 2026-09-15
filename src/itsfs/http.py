@@ -29,14 +29,19 @@ class PoliteHTTP:
         if self.owns_client:
             self.client.close()
 
-    def _request(self, url: str, *, allow_missing: bool = False) -> bytes | None:
+    def _request(self, url: str, *, allow_missing: bool = False, data=None) -> bytes | None:
         host = urlsplit(url).netloc
         wait = self.min_interval - (time.monotonic() - self.last_request.get(host, -1e9))
         if wait > 0:
             time.sleep(wait)
         self.last_request[host] = time.monotonic()
         try:
-            with self.client.stream("GET", url, headers={"User-Agent": self.user_agent}) as r:
+            with self.client.stream(
+                "POST" if data is not None else "GET",
+                url,
+                headers={"User-Agent": self.user_agent},
+                data=data,
+            ) as r:
                 if allow_missing and r.status_code == 404:
                     return None
                 if r.status_code in {401, 403, 429}:
@@ -51,16 +56,25 @@ class PoliteHTTP:
                     if size > MAX_BYTES:
                         raise SourceError("response exceeds the 10 MiB limit")
                     chunks.append(chunk)
-                return b"".join(chunks)
+                body = b"".join(chunks)
+                lower = body.lower()
+                if any(
+                    marker in lower
+                    for marker in (
+                        b"<title>just a moment...",
+                        b'id="challenge-form"',
+                        b"geo.captcha-delivery.com/captcha/",
+                    )
+                ):
+                    raise AccessDenied("source returned an access challenge; stopped")
+                return body
         except httpx.HTTPError:
             raise SourceError("network request failed or timed out") from None
 
-    def get(self, url: str) -> bytes:
+    def _check_policy(self, url: str) -> None:
         parts = urlsplit(url)
         if parts.scheme != "https" or not parts.hostname or parts.username or parts.password:
             raise AccessDenied("feed URL must use HTTPS without embedded credentials")
-        if url in self.cache and time.monotonic() - self.cache[url][0] < 300:
-            return self.cache[url][1]
         origin = f"https://{parts.netloc}"
         if origin not in self.robots:
             raw = self._request(origin + "/robots.txt", allow_missing=True)
@@ -88,6 +102,20 @@ class PoliteHTTP:
                 "robots.txt requires a delay over 60s; use an authorized local export"
             )
         self.min_interval = max(self.min_interval, delay)
+
+    def check_policy(self, url: str) -> None:
+        """Check a browser navigation against the same live robots policy."""
+        self._check_policy(url)
+
+    def get(self, url: str) -> bytes:
+        self._check_policy(url)
+        if url in self.cache and time.monotonic() - self.cache[url][0] < 300:
+            return self.cache[url][1]
         body = self._request(url)
         self.cache[url] = (time.monotonic(), body)
         return body
+
+    def post_form(self, url: str, data: dict[str, str]) -> bytes:
+        """Only for reviewed read-only public search forms. No retries or redirects."""
+        self._check_policy(url)
+        return self._request(url, data=data)

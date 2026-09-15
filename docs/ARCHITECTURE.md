@@ -30,10 +30,24 @@ distributed rate limiting or concurrent source execution. A source may return
 partial results with warnings; a raised source failure contributes no results.
 
 The `Geocoder` protocol permits future opt-in providers. The implementation in
-this release uses only bundled Italian town points. Country boundaries and town
+CLI uses bundled Italian town points. Adapters can additionally use reviewed
+provider location helpers: Caasa resolves the point to a source municipality;
+RisorseImmobiliari routes through gazetteer province codes. Country boundaries and town
 data have distinct roles: an offshore point is never assigned a country merely
 because an Italian city is nearby.
 
 Agents belong outside this runtime. Discovery, permission investigation, adapter
 maintenance, tests and registry changes happen through repository review. No LLM,
 database, web server or hosted service participates in ordinary searches.
+
+Search reports expose a non-exhaustive coverage ledger for every catalogued source
+in the detected country, including unselected, unsupported-type and disabled
+entries. This describes the registry, not the proportion of market inventory.
+Caasa's public read-only search resolver uses form POST through the same robots,
+rate-limit, response-size and denial checks as GET; no user state is saved.
+
+Publisher references are immutable attributed metadata on `Listing`. They are
+unioned when exact source identities are deduplicated, but are not themselves
+identity keys. `SearchReport.publisher_coverage()` counts references in final
+radius matches separately from the registry/direct-source ledger. Neither
+reference extraction nor reporting makes HTTP requests to originating publishers.

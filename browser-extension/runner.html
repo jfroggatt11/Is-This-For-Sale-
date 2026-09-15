@@ -1,0 +1,10 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Is This For Sale — CLI connection</title>
+<link rel="stylesheet" href="runner.css">
+<main><h1>Is This For Sale</h1>
+<p>This companion is retired. Use the CLI to launch fresh, isolated Chromium automatically.</p>
+<form id="connect"><label for="token">Pairing token from the file printed by the CLI</label>
+<input id="token" type="password" required pattern="[a-f0-9]{64}" autocomplete="off">
+<button>Connect</button><button id="disconnect" type="button">Disconnect</button></form>
+<p id="status" role="status">Disconnected.</p>
+<p>No pairing or extension is needed by the current CLI.</p>
+</main><script src="runner.js"></script></html>

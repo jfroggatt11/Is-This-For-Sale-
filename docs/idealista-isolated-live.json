@@ -1,0 +1,18 @@
+{
+  "recorded_at": "2026-09-15T11:41:09.359025+00:00",
+  "command": "itsfs search --location 'Firenze, FI' --radius 5km --source idealista --idealista-browser --include-unlocated --json",
+  "browser": "separately installed Playwright Chromium / Chrome for Testing",
+  "profile": "new temporary user-data directory, removed after browser shutdown",
+  "personal_chrome_used": false,
+  "status": "error",
+  "sources": [
+    {
+      "source": "idealista",
+      "status": "error",
+      "count": 0,
+      "warnings": [],
+      "error": "Idealista HTTP 403; stopped, no retry"
+    }
+  ],
+  "returned_listings": 0
+}

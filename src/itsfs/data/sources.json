@@ -1,51 +1,593 @@
 [
   {
-    "source": "demanio", "country_codes": ["IT"],
-    "property_types": ["residential", "land", "commercial", "agricultural", "mixed", "other"],
-    "access_method": "public_html", "status": "working", "enabled": true,
-    "location_search": false, "location_precision": "area_only", "adapter": "demanio",
-    "options": {"max_pages": 2, "max_details": 20},
+    "source": "demanio",
+    "country_codes": [
+      "IT"
+    ],
+    "property_types": [
+      "residential",
+      "land",
+      "commercial",
+      "agricultural",
+      "mixed",
+      "other"
+    ],
+    "access_method": "public_html",
+    "status": "working",
+    "enabled": true,
+    "location_search": false,
+    "location_precision": "area_only",
+    "adapter": "demanio",
+    "options": {
+      "max_pages": 2,
+      "max_details": 20
+    },
     "notes": "Public state-property sales; no key; regional candidates, municipality precision.",
     "review": "adapter_specs/demanio.md (2026-09-14)"
   },
   {
-    "source": "idealista", "country_codes": ["IT"],
-    "property_types": ["residential", "commercial", "garage"],
-    "access_method": "official_api", "status": "needs_access", "enabled": false,
-    "location_search": true, "location_precision": "approximate",
-    "notes": "Official Search API requires approval; no credentials assumed; not implemented.",
-    "review": "docs/ITALIAN_SOURCES.md"
+    "source": "risorseimmobiliari",
+    "country_codes": [
+      "IT"
+    ],
+    "property_types": [
+      "residential",
+      "garage",
+      "other"
+    ],
+    "access_method": "public_html",
+    "status": "working",
+    "location_search": false,
+    "location_precision": "approximate",
+    "adapter": "risorseimmobiliari",
+    "enabled": true,
+    "options": {},
+    "notes": "National agency portal: residential sale catalogues (including garages). Bounded province discovery; approximate property map points where supplied. No API credentials. Not exhaustive.",
+    "review": "adapter_specs/risorseimmobiliari.md (2026-09-14)"
   },
   {
-    "source": "immobiliare", "country_codes": ["IT"],
-    "property_types": ["residential", "land", "commercial"],
-    "access_method": "partner_api", "status": "needs_access", "enabled": false,
-    "location_search": false, "location_precision": "unknown",
-    "notes": "Documented syndication API publishes agency listings, not a public read feed.",
-    "review": "docs/ITALIAN_SOURCES.md"
+    "source": "caasa",
+    "country_codes": [
+      "IT"
+    ],
+    "property_types": [
+      "agricultural",
+      "commercial",
+      "development",
+      "industrial",
+      "land",
+      "other",
+      "residential"
+    ],
+    "access_method": "public_html_and_search_helpers",
+    "status": "working",
+    "location_search": false,
+    "location_precision": "approximate",
+    "adapter": "caasa",
+    "enabled": true,
+    "options": {},
+    "notes": "National portal aggregator. Public municipality lookup and bounded sale searches, auctions excluded. Approximate property coordinates where available. No credentials; no downstream portal requests.",
+    "review": "adapter_specs/caasa.md (2026-09-14)"
   },
   {
-    "source": "lombardia_auctions", "country_codes": ["IT"],
-    "property_types": ["residential", "land", "commercial"],
-    "access_method": "open_data", "status": "unavailable", "enabled": false,
-    "location_search": true, "location_precision": "approximate",
+    "source": "idealista",
+    "country_codes": [
+      "IT"
+    ],
+    "property_types": [
+      "residential"
+    ],
+    "access_method": "browser_dom",
+    "status": "experimental",
+    "enabled": false,
+    "location_search": true,
+    "location_precision": "area_only",
+    "notes": "Experimental direct browser adapter: --idealista-browser launches separate bundled Chromium with a new temporary profile per search. Personal Chrome and the former companion bridge are not used. Website access can be denied. First-page residential sales; town locations only. Owner waived site terms; robots and no-bypass rules remain.",
+    "review": "adapter_specs/idealista.md (2026-09-15)",
+    "adapter": "idealista"
+  },
+  {
+    "source": "immobiliare",
+    "country_codes": [
+      "IT"
+    ],
+    "property_types": [
+      "residential",
+      "land",
+      "commercial"
+    ],
+    "access_method": "partner_api",
+    "status": "needs_access",
+    "enabled": false,
+    "location_search": false,
+    "location_precision": "unknown",
+    "notes": "Insights Comps read API supports geographic search but requires OAuth and a suitable license; syndication API only publishes. Homepage returned 403. Caasa may expose unverified publisher references.",
+    "review": "docs/MAJOR_PORTALS.md (2026-09-14)"
+  },
+  {
+    "source": "lombardia_auctions",
+    "country_codes": [
+      "IT"
+    ],
+    "property_types": [
+      "residential",
+      "land",
+      "commercial"
+    ],
+    "access_method": "open_data",
+    "status": "unavailable",
+    "enabled": false,
+    "location_search": true,
+    "location_precision": "approximate",
     "notes": "Promising public JSON/GeoJSON; direct access failed; freshness unverified.",
     "review": "docs/ITALIAN_SOURCES.md"
   },
   {
-    "source": "italianhousesforsale", "country_codes": ["IT"],
-    "property_types": ["residential", "land", "commercial"],
-    "access_method": "html", "status": "rejected", "enabled": false,
-    "location_search": false, "location_precision": "unknown",
+    "source": "italianhousesforsale",
+    "country_codes": [
+      "IT"
+    ],
+    "property_types": [
+      "residential",
+      "land",
+      "commercial"
+    ],
+    "access_method": "html",
+    "status": "rejected",
+    "enabled": false,
+    "location_search": false,
+    "location_precision": "unknown",
     "notes": "Terms prohibit copying/redistribution; no adapter.",
     "review": "docs/ITALIAN_SOURCES.md"
   },
   {
-    "source": "jaklin_riegelmann", "country_codes": ["IT"],
-    "property_types": ["residential", "commercial", "agricultural"],
-    "access_method": "html_rss", "status": "rejected", "enabled": false,
-    "location_search": false, "location_precision": "unknown",
+    "source": "jaklin_riegelmann",
+    "country_codes": [
+      "IT"
+    ],
+    "property_types": [
+      "residential",
+      "commercial",
+      "agricultural"
+    ],
+    "access_method": "html_rss",
+    "status": "rejected",
+    "enabled": false,
+    "location_search": false,
+    "location_precision": "unknown",
     "notes": "Third-party publication restricted by terms; unsuitable for shared public results.",
     "review": "docs/ITALIAN_SOURCES.md"
+  },
+  {
+    "source": "pcase",
+    "country_codes": [
+      "IT"
+    ],
+    "property_types": [
+      "residential",
+      "land",
+      "agricultural",
+      "commercial",
+      "industrial",
+      "garage",
+      "development",
+      "mixed",
+      "other"
+    ],
+    "access_method": "unverified_public_html",
+    "status": "needs_access",
+    "location_search": false,
+    "location_precision": "unknown",
+    "enabled": false,
+    "notes": "Public pages available, but terms describe authorized partner exports and action against unauthorized crawler extraction. Access agreement needed for aggregation.",
+    "review": "docs/ITALIAN_SOURCES.md (2026-09-14)"
+  },
+  {
+    "source": "casadaprivato",
+    "country_codes": [
+      "IT"
+    ],
+    "property_types": [
+      "residential",
+      "land",
+      "agricultural",
+      "commercial",
+      "industrial",
+      "garage",
+      "development",
+      "mixed",
+      "other"
+    ],
+    "access_method": "unverified_public_html",
+    "status": "needs_access",
+    "location_search": false,
+    "location_precision": "unknown",
+    "enabled": false,
+    "notes": "Private-owner inventory. Terms 2.13 prohibit reproducing or distributing service content without authorization; partner exports require an arrangement.",
+    "review": "docs/ITALIAN_SOURCES.md (2026-09-14)"
+  },
+  {
+    "source": "trovacasa",
+    "country_codes": [
+      "IT"
+    ],
+    "property_types": [
+      "residential",
+      "land",
+      "agricultural",
+      "commercial",
+      "industrial",
+      "garage",
+      "development",
+      "mixed",
+      "other"
+    ],
+    "access_method": "unverified_public_html",
+    "status": "needs_access",
+    "location_search": false,
+    "location_precision": "unknown",
+    "enabled": false,
+    "notes": "National portal. Terms limit personal use and prohibit reproduction/distribution without authorization.",
+    "review": "docs/ITALIAN_SOURCES.md (2026-09-14)"
+  },
+  {
+    "source": "tecnocasa",
+    "country_codes": [
+      "IT"
+    ],
+    "property_types": [
+      "residential",
+      "land",
+      "agricultural",
+      "commercial",
+      "industrial",
+      "garage",
+      "development",
+      "mixed",
+      "other"
+    ],
+    "access_method": "unverified_public_html",
+    "status": "needs_access",
+    "location_search": false,
+    "location_precision": "unknown",
+    "enabled": false,
+    "notes": "National agency network. Usage policy restricts professional reuse and deep links; written authorization needed.",
+    "review": "docs/ITALIAN_SOURCES.md (2026-09-14)"
+  },
+  {
+    "source": "wikicasa",
+    "country_codes": [
+      "IT"
+    ],
+    "property_types": [
+      "residential",
+      "land",
+      "agricultural",
+      "commercial",
+      "industrial",
+      "garage",
+      "development",
+      "mixed",
+      "other"
+    ],
+    "access_method": "data_supply_enquiry",
+    "status": "needs_access",
+    "location_search": false,
+    "location_precision": "unknown",
+    "enabled": false,
+    "notes": "Official Wikicasa Dati offers inventory data by enquiry; its advertised valuation API is not a public listing-search API. Homepage returned 403. Caasa may expose unverified publisher references.",
+    "review": "docs/MAJOR_PORTALS.md (2026-09-14)"
+  },
+  {
+    "source": "casa_it",
+    "country_codes": [
+      "IT"
+    ],
+    "property_types": [
+      "residential",
+      "land",
+      "agricultural",
+      "commercial",
+      "industrial",
+      "garage",
+      "development",
+      "mixed",
+      "other"
+    ],
+    "access_method": "unverified_public_html",
+    "status": "unavailable",
+    "location_search": false,
+    "location_precision": "unknown",
+    "enabled": false,
+    "notes": "Homepage returned 403 and robots restrict search. No official credential-free inventory-read contract established. Indirect coverage must be measured, not assumed.",
+    "review": "docs/MAJOR_PORTALS.md (2026-09-14)"
+  },
+  {
+    "source": "gate_away",
+    "country_codes": [
+      "IT"
+    ],
+    "property_types": [
+      "residential",
+      "land",
+      "agricultural",
+      "commercial",
+      "industrial",
+      "garage",
+      "development",
+      "mixed",
+      "other"
+    ],
+    "access_method": "unverified_public_html",
+    "status": "unavailable",
+    "location_search": false,
+    "location_precision": "unknown",
+    "enabled": false,
+    "notes": "Public homepage returned an anti-bot page instead of listings; no challenge bypass attempted.",
+    "review": "docs/ITALIAN_SOURCES.md (2026-09-14)"
+  },
+  {
+    "source": "case24",
+    "country_codes": [
+      "IT"
+    ],
+    "property_types": [
+      "residential",
+      "land",
+      "agricultural",
+      "commercial",
+      "industrial",
+      "garage",
+      "development",
+      "mixed",
+      "other"
+    ],
+    "access_method": "unverified_public_html",
+    "status": "unavailable",
+    "location_search": false,
+    "location_precision": "unknown",
+    "enabled": false,
+    "notes": "Robots readable; homepage timed out twice. Search handler /immobili.php is disallowed; public listing-path review remains needed.",
+    "review": "docs/ITALIAN_SOURCES.md (2026-09-14)"
+  },
+  {
+    "source": "bachecacase",
+    "country_codes": [
+      "IT"
+    ],
+    "property_types": [
+      "residential",
+      "land",
+      "agricultural",
+      "commercial",
+      "industrial",
+      "garage",
+      "development",
+      "mixed",
+      "other"
+    ],
+    "access_method": "unverified_public_html",
+    "status": "investigating",
+    "location_search": false,
+    "location_precision": "unknown",
+    "enabled": false,
+    "notes": "Homepage accessible; robots restrict some detail routes. Distinct /scheda-immobile paths seen in public links require full terms and schema review.",
+    "review": "docs/ITALIAN_SOURCES.md (2026-09-14)"
+  },
+  {
+    "source": "casando",
+    "country_codes": [
+      "IT"
+    ],
+    "property_types": [
+      "residential",
+      "land",
+      "agricultural",
+      "commercial",
+      "industrial",
+      "garage",
+      "development",
+      "mixed",
+      "other"
+    ],
+    "access_method": "unverified_public_html",
+    "status": "investigating",
+    "location_search": false,
+    "location_precision": "unknown",
+    "enabled": false,
+    "notes": "Direct agency network, mostly Lombardy/Piedmont. Public catalogue and details validated; robots 404, privacy page reviewed. Adapter and geography validation remain.",
+    "review": "docs/ITALIAN_SOURCES.md (2026-09-14)"
+  },
+  {
+    "source": "immobiliareitalia",
+    "country_codes": [
+      "IT"
+    ],
+    "property_types": [
+      "residential",
+      "land",
+      "agricultural",
+      "commercial",
+      "industrial",
+      "garage",
+      "development",
+      "mixed",
+      "other"
+    ],
+    "access_method": "unverified_public_html",
+    "status": "needs_access",
+    "location_search": false,
+    "location_precision": "unknown",
+    "enabled": false,
+    "notes": "Regional La Spezia/Massa Carrara agency. Terms 4 permit personal downloads but restrict republication and commercial reuse without consent.",
+    "review": "docs/ITALIAN_SOURCES.md (2026-09-14)"
+  },
+  {
+    "source": "quimmo",
+    "country_codes": [
+      "IT"
+    ],
+    "property_types": [
+      "residential",
+      "land",
+      "agricultural",
+      "commercial",
+      "industrial",
+      "garage",
+      "development",
+      "mixed",
+      "other"
+    ],
+    "access_method": "unverified_public_html",
+    "status": "investigating",
+    "location_search": false,
+    "location_precision": "unknown",
+    "enabled": false,
+    "notes": "National auction and private-sale portal. Homepage and robots readable; terms, search contract and offer/deadline semantics need review.",
+    "review": "docs/ITALIAN_SOURCES.md (2026-09-14)"
+  },
+  {
+    "source": "asteannunci",
+    "country_codes": [
+      "IT"
+    ],
+    "property_types": [
+      "residential",
+      "land",
+      "agricultural",
+      "commercial",
+      "industrial",
+      "garage",
+      "development",
+      "mixed",
+      "other"
+    ],
+    "access_method": "unverified_public_html",
+    "status": "unavailable",
+    "location_search": false,
+    "location_precision": "unknown",
+    "enabled": false,
+    "notes": "Robots endpoint returned HTTP 403; no listing requests made.",
+    "review": "docs/ITALIAN_SOURCES.md (2026-09-14)"
+  },
+  {
+    "source": "immobiliallasta",
+    "country_codes": [
+      "IT"
+    ],
+    "property_types": [
+      "residential",
+      "land",
+      "agricultural",
+      "commercial",
+      "industrial",
+      "garage",
+      "development",
+      "mixed",
+      "other"
+    ],
+    "access_method": "unverified_public_html",
+    "status": "unavailable",
+    "location_search": false,
+    "location_precision": "unknown",
+    "enabled": false,
+    "notes": "Robots endpoint returned HTTP 530; policy unavailable, no listing requests made.",
+    "review": "docs/ITALIAN_SOURCES.md (2026-09-14)"
+  },
+  {
+    "source": "romolini",
+    "country_codes": [
+      "IT"
+    ],
+    "property_types": [
+      "residential",
+      "land",
+      "agricultural",
+      "commercial",
+      "industrial",
+      "garage",
+      "development",
+      "mixed",
+      "other"
+    ],
+    "access_method": "unverified_public_html",
+    "status": "investigating",
+    "location_search": false,
+    "location_precision": "unknown",
+    "enabled": false,
+    "notes": "Public robots permits catalogues but restricts query filters; canonical language redirects need review before listing access.",
+    "review": "docs/ITALIAN_SOURCES.md (2026-09-14)"
+  },
+  {
+    "source": "casaspeciale",
+    "country_codes": [
+      "IT"
+    ],
+    "property_types": [
+      "residential",
+      "land",
+      "agricultural",
+      "commercial",
+      "industrial",
+      "garage",
+      "development",
+      "mixed",
+      "other"
+    ],
+    "access_method": "unverified_public_html",
+    "status": "investigating",
+    "location_search": false,
+    "location_precision": "unknown",
+    "enabled": false,
+    "notes": "Regional portal candidate. Robots redirected; canonical host and usage terms need further verification.",
+    "review": "docs/ITALIAN_SOURCES.md (2026-09-14)"
+  },
+  {
+    "source": "nestoria",
+    "country_codes": [
+      "IT"
+    ],
+    "property_types": [
+      "residential",
+      "land",
+      "agricultural",
+      "commercial",
+      "industrial",
+      "garage",
+      "development",
+      "mixed",
+      "other"
+    ],
+    "access_method": "unverified_public_html",
+    "status": "investigating",
+    "location_search": false,
+    "location_precision": "unknown",
+    "enabled": false,
+    "notes": "Historic search API references are insufficient; current official public access not verified.",
+    "review": "docs/ITALIAN_SOURCES.md (2026-09-14)"
+  },
+  {
+    "source": "investinitaly",
+    "country_codes": [
+      "IT"
+    ],
+    "property_types": [
+      "residential",
+      "land",
+      "agricultural",
+      "commercial",
+      "industrial",
+      "garage",
+      "development",
+      "mixed",
+      "other"
+    ],
+    "access_method": "unverified_public_html",
+    "status": "unavailable",
+    "location_search": false,
+    "location_precision": "unknown",
+    "enabled": false,
+    "notes": "Investment catalogue includes sales and concessions. Direct connection failed; schema and reuse still unverified.",
+    "review": "docs/ITALIAN_SOURCES.md (2026-09-14)"
   }
 ]

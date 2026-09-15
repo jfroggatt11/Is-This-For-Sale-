@@ -1,0 +1,18 @@
+{
+  "checked_at": "2026-09-15T11:38:37.477970+00:00",
+  "browser_executable": "/Users/jonahfroggatt/Library/Caches/ms-playwright/chromium-1234/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
+  "external_requests": 0,
+  "runs": [
+    {
+      "profile": "/var/folders/fp/c8n3qsq500dfs1z9825h3gzh0000gn/T/itsfs-browser-4ghw9t27",
+      "started_empty": true,
+      "profile_removed": true
+    },
+    {
+      "profile": "/var/folders/fp/c8n3qsq500dfs1z9825h3gzh0000gn/T/itsfs-browser-l8yx3rhj",
+      "started_empty": true,
+      "profile_removed": true
+    }
+  ],
+  "personal_chrome_used": false
+}

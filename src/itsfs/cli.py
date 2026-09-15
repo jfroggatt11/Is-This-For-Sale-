@@ -31,6 +31,13 @@ def parser():
     search.add_argument("--source", action="append", help="limit to a named enabled source")
     search.add_argument("--config", help="additional reviewed feed-source JSON configuration")
     search.add_argument(
+        "--idealista-browser",
+        nargs="?",
+        const="playwright",
+        choices=["playwright"],
+        help="enable Idealista search in fresh bundled Chromium, isolated from personal Chrome",
+    )
+    search.add_argument(
         "--include-unlocated",
         action="store_true",
         help="include municipality-level/unknown locations; radius is unverified",
@@ -55,6 +62,8 @@ def main(argv=None) -> int:
                         f"{','.join(s.country_codes)} — {s.notes}"
                     )
             return 0
+        if args.idealista_browser:
+            registry.enable_idealista_browser(args.idealista_browser)
         lat, lon = args.lat, args.lon
         if args.location:
             if lat is not None or lon is not None:
@@ -74,6 +83,12 @@ def main(argv=None) -> int:
                 f"{report.status.upper()} | {report.country or 'unknown country'} | "
                 f"{len(report.results)} results | radius {query.radius_m:g} m"
             )
+            if report.coverage:
+                queried = sum(s["state"] == "queried" for s in report.coverage)
+                print(
+                    f"Coverage: {queried}/{len(report.coverage)} catalogued sources queried; "
+                    "country coverage is incomplete. Run itsfs sources for gaps."
+                )
             for hit in report.results:
                 x = hit.listing
                 price = (
@@ -95,6 +110,19 @@ def main(argv=None) -> int:
                     )
                 )
                 print(clean(x.url or "URL unavailable"))
+                for ref in x.publisher_references:
+                    print(
+                        clean(
+                            f"  Publisher reference via {ref.observed_via} (not fetched): {ref.url}"
+                        )
+                    )
+            for row in report.publisher_coverage():
+                print(
+                    clean(
+                        f"Publisher {row['publisher']}: {row['matched_listings']} returned "
+                        f"listings, {row['distinct_urls']} URLs; indirect, not fetched"
+                    )
+                )
             for s in report.sources:
                 for warning in s.warnings:
                     print(f"{s.source}: {clean(warning)}", file=sys.stderr)

@@ -12,6 +12,20 @@ class SearchEngine:
         country = query.country or detect_country(query.latitude, query.longitude)
         report = SearchReport(query, country, "unsupported")
         entries = self.registry.relevant(country, query.property_types, sources)
+        selected = {entry.source for entry in entries}
+        for entry in self.registry.specs:
+            if country not in entry.country_codes:
+                continue
+            state = (
+                "queried"
+                if entry.source in selected
+                else entry.status
+                if not entry.enabled
+                else "not_selected"
+                if sources and entry.source not in sources
+                else "unsupported_type"
+            )
+            report.coverage.append({"source": entry.source, "state": state, "notes": entry.notes})
         if not entries:
             report.warnings.append(
                 "No enabled sources cover this country/type; see discovery docs."
