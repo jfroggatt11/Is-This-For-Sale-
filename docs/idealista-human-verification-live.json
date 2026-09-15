@@ -1,0 +1,14 @@
+{
+  "evidence_type": "fresh_browser_human_verification_attempt",
+  "recorded_at": "2026-09-15T15:52:51+00:00",
+  "command": "itsfs search --location 'Firenze, FI' --radius 5km --source idealista --idealista-browser --idealista-verification human --include-unlocated --json",
+  "browser": "separately installed Playwright Chromium / Chrome for Testing",
+  "profile": "new temporary user-data directory; removed after the run",
+  "personal_chrome_used": false,
+  "challenge_automation": false,
+  "verification_wait_seconds": 300,
+  "status": "error",
+  "error": "Idealista verification was not completed before the timeout",
+  "returned_listings": 0,
+  "conclusion": "The explicit human handoff and bounded timeout ran; no accepted listing page or direct listing data was obtained."
+}

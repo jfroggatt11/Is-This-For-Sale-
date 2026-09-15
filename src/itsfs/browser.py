@@ -1,5 +1,6 @@
 """Fresh bundled Chromium transport. No personal Chrome, profile import or bypasses."""
 
+import sys
 import time
 from contextlib import contextmanager
 from dataclasses import dataclass
@@ -109,16 +110,46 @@ def has_access_challenge(page):
     )
 
 
+def browser_failure(stage, error):
+    """Return an actionable message without exposing page content or browser state."""
+    message = str(error).casefold()
+    if "has been closed" in message or "target page, context or browser has been closed" in message:
+        return SourceError("isolated browser was closed before the Idealista search finished")
+    return SourceError(f"isolated Chromium failed during {stage}; no personal Chrome was used")
+
+
 class IdealistaBrowser:
     """One fresh, visible bundled Chromium process and context per search."""
 
-    def __init__(self, policy, *, timeout_s=30):
+    def __init__(self, policy, *, timeout_s=30, verification="none", verification_timeout_s=300):
         if not 5 <= timeout_s <= 60:
             raise ValueError("browser timeout must be 5..60 seconds")
+        if verification not in {"none", "human"}:
+            raise ValueError("browser verification must be none or human")
+        if not 30 <= verification_timeout_s <= 600:
+            raise ValueError("verification timeout must be 30..600 seconds")
         self.policy = policy
         self.timeout_s = timeout_s
+        self.verification = verification
+        self.verification_timeout_s = verification_timeout_s
         self.navigation_log = []
         self.last_navigation = 0.0
+
+    def _wait_for_human_verification(self, page, selector):
+        if self.verification != "human":
+            raise AccessDenied("Idealista presented an access challenge; stopped, no retry")
+        print(
+            "Idealista needs verification in the isolated browser. Complete it there; "
+            "the search will continue automatically. Do not close the browser.",
+            file=sys.stderr,
+        )
+        deadline = time.monotonic() + self.verification_timeout_s
+        while time.monotonic() < deadline:
+            if page.locator(selector).count():
+                check_url(page.url)
+                return
+            page.wait_for_timeout(250)
+        raise AccessDenied("Idealista verification was not completed before the timeout")
 
     def _allow(self, url):
         check_url(url)
@@ -133,7 +164,8 @@ class IdealistaBrowser:
         deadline = time.monotonic() + self.timeout_s
         while time.monotonic() < deadline:
             if has_access_challenge(page):
-                raise AccessDenied("Idealista presented an access challenge; stopped, no retry")
+                self._wait_for_human_verification(page, selector)
+                return
             if page.locator(selector).count():
                 check_url(page.url)
                 return
@@ -144,7 +176,10 @@ class IdealistaBrowser:
         self._allow(url)
         response = page.goto(url, wait_until="domcontentloaded", timeout=self.timeout_s * 1000)
         if has_access_challenge(page):
-            raise AccessDenied("Idealista presented an access challenge; stopped, no retry")
+            self._wait_for_human_verification(page, ready)
+            if page.url != url:
+                raise AccessDenied("Idealista redirected the requested page; stopped")
+            return
         if (
             response
             and response.status == 403
@@ -171,17 +206,21 @@ class IdealistaBrowser:
                 "install the browser extra: pip install 'is-this-for-sale[browser]'"
             ) from None
         self.navigation_log = []
+        stage = "browser launch"
         try:
             with sync_playwright() as pw:
                 with fresh_chromium(pw) as context:
                     page = context.new_page()
                     page.set_default_timeout(self.timeout_s * 1000)
+                    stage = "homepage access or verification"
                     self._goto(page, BASE + "/", "#campoBus")
+                    stage = "cookie preference"
                     decline = page.get_by_role(
                         "button", name="Continua senza accettare", exact=True
                     )
                     if decline.count() and decline.is_visible():
                         decline.click()
+                    stage = "municipality resolution"
                     links = page.locator("a.icon-elbow").evaluate_all(
                         "nodes => nodes.map(n => n.outerHTML).join('')"
                     )
@@ -199,17 +238,18 @@ class IdealistaBrowser:
                         raise SourceChanged(
                             "Idealista did not resolve the nearest town to a municipality"
                         )
+                    stage = "municipality sale catalogue"
                     self._goto(page, url, "#qa_adfilter_auctionability")
+                    stage = "auction exclusion"
                     page.locator("#qa_adfilter_auctionability").click()
                     # This route was observed from the site's actual auction-exclusion control.
                     target = url + "con-aste_no/"
                     self._allow(target)
                     page.locator("#qa_adfilter_auctionability_option_1").click()
+                    stage = "filtered sale catalogue"
                     page.wait_for_url(target, timeout=self.timeout_s * 1000)
                     self._ready(page, "#h1-container")
+                    stage = "listing fact capture"
                     return BrowserPage(page.url, page.evaluate(SEARCH_DOM), datetime.now(UTC))
-        except Error:
-            raise SourceError(
-                "Isolated Chromium failed or timed out; run python -m playwright install chromium. "
-                "No connection to personal Chrome was attempted."
-            ) from None
+        except Error as exc:
+            raise browser_failure(stage, exc) from None

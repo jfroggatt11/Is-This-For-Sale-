@@ -68,10 +68,12 @@ class Registry:
         self.http = http or PoliteHTTP("IsThisForSale/0.1 (public property search CLI)")
         self.instances = {}
 
-    def enable_idealista_browser(self, backend="playwright"):
+    def enable_idealista_browser(self, backend="playwright", verification="none"):
         """Explicit opt-in: launch a fresh bundled Chromium process for each search."""
         if backend != "playwright":
             raise ValueError("only fresh isolated Chromium is supported")
+        if verification not in {"none", "human"}:
+            raise ValueError("Idealista verification must be none or human")
         self.specs = [
             replace(
                 s,
@@ -81,7 +83,7 @@ class Registry:
                 access_method="browser_dom",
                 property_types=["residential"],
                 location_precision="area_only",
-                options={"backend": backend},
+                options={"backend": backend, "verification": verification},
             )
             if s.source == "idealista"
             else s

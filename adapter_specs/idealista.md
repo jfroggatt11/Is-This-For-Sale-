@@ -80,6 +80,26 @@ on source and launch errors, default routing, and rejection of the old backend.
 Robots checks and at least two seconds between top-level navigations remain.
 There are no stealth, cookie import, proxy-rotation or challenge-solver options.
 
+### Optional agent-time verification
+
+`--idealista-verification human` is an explicit agent-assisted mode. If an
+interactive challenge appears, the CLI leaves the isolated browser open for up to
+five minutes while the user completes the website's normal verification. It only
+observes whether the requested Idealista page subsequently loads, then continues
+the same search in the same temporary profile. It does not interact with the
+challenge, send it elsewhere, reuse the verified state in another process, or save
+the temporary profile. A closed window or timeout fails the source cleanly.
+
+The default remains `verification=none`, which stops immediately. This keeps the
+eventual unattended pipeline honest: it needs a documented API/feed, operator
+allow-listing, or an access path that succeeds without a challenge. Human solving
+is an agent-time fallback, not an unattended integration strategy.
+
+The first live human-mode exercise on 2026-09-15 reached the verification wait and
+timed out without an accepted listing page. It therefore validates the bounded
+handoff/cleanup path, not successful extraction. A fresh human-assisted success is
+still required before the adapter can be described as live-working.
+
 ## Observed DOM contract
 
 - Search header: `#h1-container`; sale tab: `#tab-buy[aria-selected=true]`.

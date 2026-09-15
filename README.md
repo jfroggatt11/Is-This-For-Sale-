@@ -75,6 +75,20 @@ existing profiles, cookies, saved logins and extensions are not used. There is n
 attachment endpoint or fallback to an existing browser. No companion installation
 or pairing is needed; the former shared-profile extension route is retired.
 
+For an agent-assisted run, explicitly permit a one-time human verification:
+
+```sh
+itsfs search --location 'Firenze, FI' --radius 5km --source idealista \
+  --idealista-browser --idealista-verification human \
+  --include-unlocated --json
+```
+
+The isolated browser remains open for up to five minutes when an interactive
+verification appears. Complete it in that window; the CLI resumes automatically
+after the expected Idealista page loads. It does not click, solve or outsource the
+challenge. Without this explicit option, an interactive challenge fails immediately.
+The unattended pipeline therefore has no implicit human dependency.
+
 This path returns up to 30 residential sale cards from one municipality's first
 page, excluding auctions, when the site admits the browser. Town locations have
 unverified radius matches. Earlier personal Chrome access does not establish

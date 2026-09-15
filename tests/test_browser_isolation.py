@@ -47,6 +47,7 @@ def test_cli_and_registry_default_to_isolated_browser():
         registry.enable_idealista_browser()
         spec = next(s for s in registry.specs if s.source == "idealista")
         assert isinstance(registry.load(spec).browser, IdealistaBrowser)
+        assert registry.load(spec).browser.verification == "none"
         with pytest.raises(ValueError, match="isolated"):
             registry.enable_idealista_browser("extension")
         with pytest.raises(ValueError, match="isolated"):
@@ -58,3 +59,23 @@ def test_cli_and_registry_default_to_isolated_browser():
 def test_cli_rejects_retired_shared_extension_backend():
     with pytest.raises(SystemExit):
         parser().parse_args(["search", "--idealista-browser", "extension"])
+
+
+def test_human_verification_is_explicit_and_reaches_adapter():
+    args = parser().parse_args(
+        ["search", "--idealista-browser", "--idealista-verification", "human"]
+    )
+    registry = Registry()
+    try:
+        registry.enable_idealista_browser(args.idealista_browser, args.idealista_verification)
+        spec = next(s for s in registry.specs if s.source == "idealista")
+        assert registry.load(spec).browser.verification == "human"
+    finally:
+        registry.close()
+
+
+def test_human_verification_without_browser_is_rejected(capsys):
+    from itsfs.cli import main
+
+    assert main(["search", "--idealista-verification", "human"]) == 2
+    assert "requires --idealista-browser" in capsys.readouterr().err

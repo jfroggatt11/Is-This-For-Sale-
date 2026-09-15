@@ -4,7 +4,7 @@ from unittest.mock import MagicMock
 import pytest
 
 from itsfs.adapters.base import AccessDenied
-from itsfs.browser import IdealistaBrowser, has_access_challenge
+from itsfs.browser import IdealistaBrowser, browser_failure, has_access_challenge
 
 HOME = "https://www.idealista.it/"
 DEVICE = 'iframe[title="DataDome Device Check"][src*="/interstitial/"]'
@@ -62,3 +62,43 @@ def test_interactive_challenge_stops_even_if_initial_response_was_success():
     with pytest.raises(AccessDenied, match="challenge"):
         browser._goto(tab, HOME, "#campoBus")
     browser._ready.assert_not_called()
+
+
+def test_human_verification_waits_for_ready_page(capsys):
+    tab = MagicMock()
+    tab.url = HOME
+    counts = iter([0, 1])
+    tab.locator.return_value.count.side_effect = lambda: next(counts)
+    browser = IdealistaBrowser(MagicMock(), verification="human")
+    browser._wait_for_human_verification(tab, "#campoBus")
+    tab.wait_for_timeout.assert_called_once_with(250)
+    assert "Complete it there" in capsys.readouterr().err
+
+
+def test_human_verification_timeout(monkeypatch):
+    tab = MagicMock()
+    tab.locator.return_value.count.return_value = 0
+    clock = iter([0, 31])
+    monkeypatch.setattr("itsfs.browser.time.monotonic", lambda: next(clock))
+    browser = IdealistaBrowser(MagicMock(), verification="human", verification_timeout_s=30)
+    with pytest.raises(AccessDenied, match="not completed"):
+        browser._wait_for_human_verification(tab, "#campoBus")
+
+
+def test_goto_delegates_challenge_only_in_human_mode():
+    tab = page(status=403, frame="https://geo.captcha-delivery.com/captcha/")
+    browser = IdealistaBrowser(MagicMock(), verification="human")
+    browser._allow = MagicMock()
+    browser._wait_for_human_verification = MagicMock()
+    browser._goto(tab, HOME, "#campoBus")
+    browser._wait_for_human_verification.assert_called_once_with(tab, "#campoBus")
+    tab.goto.assert_called_once()
+
+
+def test_browser_failures_are_sanitized_by_stage():
+    assert "closed" in str(
+        browser_failure("verification", RuntimeError("Target page has been closed"))
+    )
+    message = str(browser_failure("listing fact capture", RuntimeError("secret page content")))
+    assert "listing fact capture" in message
+    assert "secret page content" not in message

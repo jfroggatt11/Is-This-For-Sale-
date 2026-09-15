@@ -38,6 +38,11 @@ def parser():
         help="enable Idealista search in fresh bundled Chromium, isolated from personal Chrome",
     )
     search.add_argument(
+        "--idealista-verification",
+        choices=["human"],
+        help="pause for you to complete website verification in the isolated browser",
+    )
+    search.add_argument(
         "--include-unlocated",
         action="store_true",
         help="include municipality-level/unknown locations; radius is unverified",
@@ -62,8 +67,12 @@ def main(argv=None) -> int:
                         f"{','.join(s.country_codes)} — {s.notes}"
                     )
             return 0
+        if args.idealista_verification and not args.idealista_browser:
+            raise ValueError("--idealista-verification requires --idealista-browser")
         if args.idealista_browser:
-            registry.enable_idealista_browser(args.idealista_browser)
+            registry.enable_idealista_browser(
+                args.idealista_browser, args.idealista_verification or "none"
+            )
         lat, lon = args.lat, args.lon
         if args.location:
             if lat is not None or lon is not None:
