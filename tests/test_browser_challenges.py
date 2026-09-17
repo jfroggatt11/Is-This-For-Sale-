@@ -96,9 +96,8 @@ def test_goto_delegates_challenge_only_in_human_mode():
 
 
 def test_browser_failures_are_sanitized_by_stage():
-    assert "closed" in str(
-        browser_failure("verification", RuntimeError("Target page has been closed"))
-    )
+    closed = str(browser_failure("verification", RuntimeError("Target page has been closed")))
+    assert "closed" in closed and "verification" in closed
     message = str(browser_failure("listing fact capture", RuntimeError("secret page content")))
     assert "listing fact capture" in message
     assert "secret page content" not in message

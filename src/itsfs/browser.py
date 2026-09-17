@@ -114,7 +114,9 @@ def browser_failure(stage, error):
     """Return an actionable message without exposing page content or browser state."""
     message = str(error).casefold()
     if "has been closed" in message or "target page, context or browser has been closed" in message:
-        return SourceError("isolated browser was closed before the Idealista search finished")
+        return SourceError(
+            f"isolated browser was closed during {stage}, before the Idealista search finished"
+        )
     return SourceError(f"isolated Chromium failed during {stage}; no personal Chrome was used")
 
 

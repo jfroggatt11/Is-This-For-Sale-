@@ -10,5 +10,12 @@
   "status": "error",
   "error": "Idealista verification was not completed before the timeout",
   "returned_listings": 0,
-  "conclusion": "The explicit human handoff and bounded timeout ran; no accepted listing page or direct listing data was obtained."
+  "conclusion": "The explicit human handoff and bounded timeout ran; no accepted listing page or direct listing data was obtained.",
+  "retry_on_2026-09-16": {
+    "status": "error",
+    "error": "isolated browser was closed before the Idealista search finished",
+    "returned_listings": 0,
+    "elapsed_after_verification_prompt_seconds": 25,
+    "interpretation": "The browser closed while the CLI was still waiting. This does not establish whether verification had been accepted."
+  }
 }
