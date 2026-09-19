@@ -1,0 +1,17 @@
+{
+  "date": "2026-09-18",
+  "transport": "playwright bundled Chrome for Testing",
+  "profile": "app-owned persistent profile at ~/.cache/itsfs/idealista-chromium",
+  "personal_chrome_used": false,
+  "verification": "human",
+  "location": "Firenze, FI",
+  "result": "verification_timeout",
+  "exit_code": 4,
+  "accepted_listing_page": false,
+  "listings": 0,
+  "notes": [
+    "The separate headed browser opened and waited for normal user verification.",
+    "No accepted Idealista catalogue page arrived within the five-minute bounded wait.",
+    "The app-owned profile was retained for a later run; no challenge was bypassed."
+  ]
+}

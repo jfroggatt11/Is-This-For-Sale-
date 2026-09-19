@@ -82,7 +82,7 @@
     "enabled": false,
     "location_search": true,
     "location_precision": "area_only",
-    "notes": "Experimental direct browser adapter: --idealista-browser launches separate bundled Chromium with a new temporary profile per search. Personal Chrome and the former companion bridge are not used. Website access can be denied. First-page residential sales; town locations only. Owner waived site terms; robots and no-bypass rules remain.",
+    "notes": "Experimental direct browser adapter: --idealista-browser launches separate bundled Chromium with a temporary profile per search, or an explicit app-owned persistent profile. Personal Chrome and the former companion bridge are not used. Website access can be denied. First-page residential sales; town locations only. Owner waived site terms; robots and no-bypass rules remain.",
     "review": "adapter_specs/idealista.md (2026-09-15)",
     "adapter": "idealista"
   },

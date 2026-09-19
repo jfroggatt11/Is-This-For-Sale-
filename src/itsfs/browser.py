@@ -5,6 +5,7 @@ import time
 from contextlib import contextmanager
 from dataclasses import dataclass
 from datetime import UTC, datetime
+from pathlib import Path
 from tempfile import TemporaryDirectory
 from urllib.parse import urlsplit
 
@@ -14,17 +15,20 @@ from .adapters.base import AccessDenied, SourceChanged, SourceError
 from .geocoding import normalize
 
 BASE = "https://www.idealista.it"
+DEFAULT_IDEALISTA_PROFILE = Path.home() / ".cache" / "itsfs" / "idealista-chromium"
 
 
 @contextmanager
-def fresh_chromium(playwright, *, headless=False):
-    """Own a new browser process and empty context, closing both even on failure.
-
-    No channel, executable path, saved storage, profile path or connection endpoint
-    is accepted. Playwright launches its separate bundled Chromium with temporary
-    browser data. A context is never borrowed from an existing browser.
-    """
-    with TemporaryDirectory(prefix="itsfs-browser-") as profile:
+def fresh_chromium(playwright, *, headless=False, profile_dir=None):
+    """Own a bundled Chromium process, optionally retaining an app-owned profile."""
+    temporary = profile_dir is None
+    profile_context = TemporaryDirectory(prefix="itsfs-browser-") if temporary else None
+    profile = (
+        profile_context.__enter__() if profile_context else str(Path(profile_dir).expanduser())
+    )
+    if not temporary:
+        Path(profile).mkdir(parents=True, exist_ok=True)
+    try:
         context = playwright.chromium.launch_persistent_context(
             profile, headless=headless, accept_downloads=False
         )
@@ -32,6 +36,9 @@ def fresh_chromium(playwright, *, headless=False):
             yield context
         finally:
             context.close()
+    finally:
+        if profile_context:
+            profile_context.__exit__(None, None, None)
 
 
 # Capture facts only; do not persist descriptions, photos, contacts or browser state.
@@ -123,17 +130,38 @@ def browser_failure(stage, error):
 class IdealistaBrowser:
     """One fresh, visible bundled Chromium process and context per search."""
 
-    def __init__(self, policy, *, timeout_s=30, verification="none", verification_timeout_s=300):
+    def __init__(
+        self,
+        policy,
+        *,
+        timeout_s=30,
+        verification="none",
+        verification_timeout_s=300,
+        persistent=False,
+        profile_dir=None,
+    ):
         if not 5 <= timeout_s <= 60:
             raise ValueError("browser timeout must be 5..60 seconds")
         if verification not in {"none", "human"}:
             raise ValueError("browser verification must be none or human")
         if not 30 <= verification_timeout_s <= 600:
             raise ValueError("verification timeout must be 30..600 seconds")
+        if profile_dir is not None and not persistent:
+            raise ValueError("an Idealista profile requires --idealista-persistent-profile")
         self.policy = policy
         self.timeout_s = timeout_s
         self.verification = verification
         self.verification_timeout_s = verification_timeout_s
+        self.persistent = persistent
+        self.profile_dir = (
+            (
+                Path(profile_dir).expanduser()
+                if profile_dir is not None
+                else DEFAULT_IDEALISTA_PROFILE
+            )
+            if persistent
+            else None
+        )
         self.navigation_log = []
         self.last_navigation = 0.0
 
@@ -211,7 +239,7 @@ class IdealistaBrowser:
         stage = "browser launch"
         try:
             with sync_playwright() as pw:
-                with fresh_chromium(pw) as context:
+                with fresh_chromium(pw, profile_dir=self.profile_dir) as context:
                     page = context.new_page()
                     page.set_default_timeout(self.timeout_s * 1000)
                     stage = "homepage access or verification"

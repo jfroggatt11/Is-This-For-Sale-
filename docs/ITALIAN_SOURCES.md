@@ -39,7 +39,7 @@ the earlier homepage probe below still describes its HTML access.
 
 | Candidate | Observed evidence | Registry decision / next step |
 | --- | --- | --- |
-| Idealista | [Browser investigation](../adapter_specs/idealista.md): normal Chrome pages accessible, fresh Playwright session returned 403 | `experimental`, fresh bundled Chromium per search. First-page residential sales, area-only location. Shared-profile companion retired. |
+| Idealista | [Browser investigation](../adapter_specs/idealista.md): normal Chrome pages accessible, fresh Playwright session returned 403 | `experimental`, separate bundled Chromium per search with optional app-owned persistent profile. First-page residential sales, area-only location. Shared-profile companion retired. |
 | Immobiliare.it | [Import docs](https://feed.immobiliare.it/integration/ii/docs/import/get-start) describe publishing agency inventory; [Insights](https://insights.immobiliare.it/webdocs/service/comps/getting-started/) requires authorization; homepage returned 403 | `needs_access` to a suitable read product. An upload API is not a portal-search API. |
 | PCase | Public search pages available; [terms modal](https://www.pcase.it/ajax/modal_privacy/) discusses authorized partner exports and unauthorized crawler extraction | `needs_access` for this aggregation use. Do not use robots-blocked RSS or `/include/` endpoints. |
 | CasaDaPrivato | [Terms 2.13](https://www.casadaprivato.it/info/policies/regolamento) restrict reproduction/distribution; partner export arrangements described separately | `needs_access`; attractive independent private-owner inventory. |

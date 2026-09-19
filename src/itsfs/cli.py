@@ -43,6 +43,11 @@ def parser():
         help="pause for you to complete website verification in the isolated browser",
     )
     search.add_argument(
+        "--idealista-persistent-profile",
+        action="store_true",
+        help="retain cookies in the app-owned Idealista Chromium profile",
+    )
+    search.add_argument(
         "--include-unlocated",
         action="store_true",
         help="include municipality-level/unknown locations; radius is unverified",
@@ -69,9 +74,13 @@ def main(argv=None) -> int:
             return 0
         if args.idealista_verification and not args.idealista_browser:
             raise ValueError("--idealista-verification requires --idealista-browser")
+        if args.idealista_persistent_profile and not args.idealista_browser:
+            raise ValueError("--idealista-persistent-profile requires --idealista-browser")
         if args.idealista_browser:
             registry.enable_idealista_browser(
-                args.idealista_browser, args.idealista_verification or "none"
+                args.idealista_browser,
+                args.idealista_verification or "none",
+                args.idealista_persistent_profile,
             )
         lat, lon = args.lat, args.lon
         if args.location:

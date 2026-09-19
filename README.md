@@ -151,6 +151,23 @@ This explicit fixture example demonstrates residential/land/commercial
 normalization, multiple providers, distances and deduplication. It contains
 **fictional listings**, never used as a fallback for failed live requests.
 
+For the experimental Idealista browser adapter, the default is a fresh isolated
+profile that stops if the site presents an access challenge. An agent-assisted
+run can retain normal cookies in a separate app-owned Chrome-for-Testing profile:
+
+```bash
+itsfs search --location "Firenze, FI" --radius 5km --source idealista \
+  --idealista-browser --idealista-persistent-profile \
+  --idealista-verification human --include-unlocated --json
+```
+
+The retained profile lives at `~/.cache/itsfs/idealista-chromium`; it is never
+your personal Chrome profile and is not imported into any other browser. On the
+first run, complete any normal website verification in the separate window. A
+later run may reuse the site's ordinary cookie state, but the unattended default
+still stops when verification is required. Delete that app-owned directory to
+reset it.
+
 ## Design
 
 ```text

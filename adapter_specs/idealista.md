@@ -61,11 +61,14 @@ page. The Python parser and engine handle normalization, source outcomes,
 deduplication and final geographic filtering. No LLM runs at search time.
 
 The only supported browser backend now launches Playwright's separately installed
-Chromium / Chrome for Testing. Every search creates a new temporary user-data
-directory, starts its own browser process and empty context, then closes the context
-and removes the directory. The runtime accepts no personal profile path, saved
-storage, browser channel, executable override or remote-debugging endpoint. It
-never attaches to the connected personal Chrome browser or falls back to it.
+Chromium / Chrome for Testing. By default every search creates a new temporary
+user-data directory, starts its own browser process and empty context, then closes
+the context and removes the directory. An explicit persistent-profile option uses
+the app-owned `~/.cache/itsfs/idealista-chromium` directory instead, retaining only
+that profile's ordinary cookies between runs. It remains a separate browser
+process and never attaches to, imports from, or falls back to personal Chrome.
+The runtime accepts no arbitrary personal profile path, browser channel,
+executable override or remote-debugging endpoint.
 
 The former extension bridge is removed from the Python package and rejected by
 the CLI. Its connection page is retired. An extension previously loaded in personal
@@ -86,9 +89,11 @@ There are no stealth, cookie import, proxy-rotation or challenge-solver options.
 interactive challenge appears, the CLI leaves the isolated browser open for up to
 five minutes while the user completes the website's normal verification. It only
 observes whether the requested Idealista page subsequently loads, then continues
-the same search in the same temporary profile. It does not interact with the
-challenge, send it elsewhere, reuse the verified state in another process, or save
-the temporary profile. A closed window or timeout fails the source cleanly.
+the same search in the same profile. With the default temporary profile, that
+state is discarded when the run ends. With `--idealista-persistent-profile`, the
+app-owned profile remains for a later run. It does not interact with the challenge,
+send it elsewhere, or bypass access controls. A closed window or timeout fails the
+source cleanly.
 
 The default remains `verification=none`, which stops immediately. This keeps the
 eventual unattended pipeline honest: it needs a documented API/feed, operator
@@ -97,8 +102,10 @@ is an agent-time fallback, not an unattended integration strategy.
 
 The first live human-mode exercise on 2026-09-15 reached the verification wait and
 timed out without an accepted listing page. It therefore validates the bounded
-handoff/cleanup path, not successful extraction. A fresh human-assisted success is
-still required before the adapter can be described as live-working.
+handoff/cleanup path, not successful extraction. A persistent-profile human-mode
+retry on 2026-09-18 also timed out without an accepted listing page; the retained
+profile is available for a later user-assisted run. [Recorded result](../docs/idealista-persistent-live.json).
+The adapter therefore remains experimental and is not described as live-working.
 
 ## Observed DOM contract
 

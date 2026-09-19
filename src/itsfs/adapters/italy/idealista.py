@@ -111,14 +111,24 @@ class IdealistaAdapter(PropertySourceAdapter):
     source_name = "idealista"
     country_codes = ["IT"]
 
-    def __init__(self, http, *, browser=None, backend="playwright", verification="none"):
+    def __init__(
+        self,
+        http,
+        *,
+        browser=None,
+        backend="playwright",
+        verification="none",
+        persistent=False,
+    ):
         super().__init__()
         self.http = http
         if backend != "playwright":
             raise ValueError(
                 "only fresh isolated Chromium is supported; shared browser bridge retired"
             )
-        self.browser = browser or IdealistaBrowser(http, verification=verification)
+        self.browser = browser or IdealistaBrowser(
+            http, verification=verification, persistent=persistent
+        )
 
     def search(self, latitude, longitude, radius_m, property_types=None):
         SearchQuery(latitude, longitude, radius_m, property_types)
